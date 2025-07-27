@@ -124,50 +124,145 @@
   </nav>
 
   <!-- ======= PRODUCT DETAILS SECTION ======= -->
-  <main class="max-w-5xl mx-auto px-4 py-16 flex flex-col md:flex-row gap-12 items-start">
-  <!-- Product Image & Details (left column) -->
-  <div class="w-full md:w-1/2 flex flex-col items-center">
-    <img src="./Photos/Untitled.jpeg" alt="I Am Protected" class="rounded-xl shadow-lg w-full max-w-xs object-cover mb-6">
-    <div class="w-full">
-      <h2 class="text-xl font-bold mb-2">Product Details</h2>
-      <ul class="list-disc pl-6 text-gray-700 space-y-1">
-        <li>100% natural, Ayurvedic ingredients</li>
-        <li>Suitable for all skin types</li>
-        <li>Free from parabens, sulfates, and artificial fragrances</li>
-        <li>Handcrafted in Nepal</li>
-      </ul>
-      <div class="mt-6">
-        <h2 class="text-lg font-semibold mb-1">How to Use</h2>
-        <p class="text-gray-700">Apply 2-3 drops to cleansed face and neck, morning and night. Gently massage until absorbed. Follow with your favorite moisturizer.</p>
+  <main class="max-w-7xl mx-auto px-4 py-10 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <!-- Product Gallery -->
+    <div class="w-full flex flex-col gap-6">
+      <div class="w-full aspect-square bg-gray-100 rounded-2xl overflow-hidden flex items-center justify-center relative shadow-lg">
+        <img id="main-product-img" src="./Photos/Untitled.jpeg" alt="I Am Protected" class="object-cover w-full h-full transition-all duration-300" />
+        <!-- Optional: Sale badge or similar -->
+        <span class="absolute top-4 left-4 bg-[#8B4513] text-white text-xs font-bold px-3 py-1 rounded-full shadow">Best Seller</span>
+      </div>
+      <!-- Thumbnails -->
+      <div class="flex gap-3 justify-center">
+        <img src="./Photos/Untitled.jpeg" alt="I Am Protected" class="w-20 h-20 object-cover rounded-lg border-2 border-[#8B4513] cursor-pointer ring-2 ring-[#8B4513]" onclick="document.getElementById('main-product-img').src='./Photos/Untitled.jpeg'">
+        <img src="./Photos/pro1.png" alt="I Am Protected Alt" class="w-20 h-20 object-cover rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#8B4513]" onclick="document.getElementById('main-product-img').src='./Photos/pro1.png'">
+        <img src="./Photos/pro2.png" alt="I Am Protected Alt 2" class="w-20 h-20 object-cover rounded-lg border-2 border-gray-200 cursor-pointer hover:border-[#8B4513]" onclick="document.getElementById('main-product-img').src='./Photos/pro2.png'">
+      </div>
+
+      <!-- Clinically Proven Results Section moved below main grid -->
+    </div>
+    <!-- Product Info & Actions -->
+    <div class="w-full flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start bg-white/90 z-20 rounded-2xl shadow-lg p-6">
+      <h1 class="text-3xl md:text-4xl font-bold font-playfair text-[#18382c]">I Am Protected</h1>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center text-yellow-400 text-xl">
+          <span>★★★★☆</span>
+        </div>
+        <span class="text-[#666] text-base">183 reviews</span>
+        <a href="#reviews-list" class="text-xs text-[#8B4513] underline ml-2">See all reviews</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="font-bold text-2xl md:text-3xl text-[#18382c]">Rs13,300 NPR</span>
+        <span class="line-through text-[#999] text-lg">Rs14,800 NPR</span>
+      </div>
+      <div class="text-base md:text-lg text-gray-700 leading-relaxed">
+        Experience the power of Himalayan botanicals with our signature "I Am Protected" serum. Crafted with pure, natural ingredients, this formula helps shield your skin from environmental stressors, leaving it radiant and nourished.
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="size" class="block text-sm font-medium mb-1">Size</label>
+        <select id="size" class="px-4 py-2 border border-gray-300 rounded-md bg-white text-base cursor-pointer w-40">
+          <option>30mL</option>
+          <option>50mL</option>
+        </select>
+      </div>
+      <button class="bg-[#18382c] hover:bg-[#285c44] text-white px-8 py-3 rounded-lg font-semibold text-lg transition w-full md:w-1/2 mt-2 shadow-lg">Add to Cart</button>
+      <div class="flex items-center gap-3 mt-2 flex-wrap">
+        <span class="text-xs text-gray-500 whitespace-nowrap">Free shipping on orders over Rs5,000</span>
+        <span class="text-xs text-gray-500">|</span>
+        <span class="text-xs text-gray-500 whitespace-nowrap">Handcrafted in Nepal</span>
       </div>
     </div>
-  </div>
-  <!-- Product Info (right column) -->
-  <div class="w-full md:w-1/2 flex flex-col gap-6">
-    <h1 class="text-3xl md:text-4xl font-bold font-playfair text-[#18382c] mb-2">I Am Protected</h1>
-    <div class="flex items-center gap-3">
-      <div class="text-yellow-400 text-xl">★★★★☆</div>
-      <span class="text-[#666] text-base">(183 reviews)</span>
+
+  </main>
+
+  <!-- ======= CLINICALLY PROVEN RESULTS FULL-WIDTH SECTION ======= -->
+  <section class="max-w-7xl mx-auto px-4 flex flex-col gap-8 pb-0">
+    <section class="w-full bg-[#f9f7f3] rounded-2xl shadow-md p-6 flex flex-col gap-6 border border-[#e5e5e5]">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#18382c] mb-2 text-center">Clinically Proven Results</h2>
+      <div class="flex flex-col md:flex-row gap-6 items-center justify-center">
+        <!-- Results Text -->
+        <div class="flex-1 flex flex-col gap-4">
+          <div>
+            <h3 class="text-lg font-semibold text-[#8B4513] mb-1">Clinical Results</h3>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl md:text-4xl font-bold text-[#18382c]">100%</span>
+                <span class="text-base md:text-lg text-gray-700">Demonstrated a reduction in the appearance of pore size*</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-[#8B4513] mb-1">Consumer Results</h3>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl md:text-4xl font-bold text-[#18382c]">97%</span>
+                <span class="text-base md:text-lg text-gray-700">Agree skin feels nourished**</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-3xl md:text-4xl font-bold text-[#18382c]">94%</span>
+                <span class="text-base md:text-lg text-gray-700">Agree skin texture feels more refined</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-xs text-gray-500 mt-2">*Based on a clinical study. **Based on a consumer perception study.</div>
+        </div>
+        <!-- Results Images -->
+        <div class="flex-1 flex flex-row items-center justify-center gap-4">
+          <img src="./Photos/rits1.png" alt="Clinical Results 1" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl border-2 border-[#8B4513] shadow" />
+          <img src="./Photos/rits2.png" alt="Clinical Results 2" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl border-2 border-[#8B4513] shadow" />
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ======= PRODUCT DETAILS FULL-WIDTH SECTIONS ======= -->
+  <section class="max-w-7xl mx-auto px-4 flex flex-col gap-8 pb-12">
+    <section class="flex flex-col md:flex-row gap-6 items-center bg-white/80 border rounded-xl p-6">
+      <div class="flex-1 flex flex-col gap-2 order-1 md:order-1">
+        <h2 class="text-xl font-bold text-[#18382c] mb-2">Benefits</h2>
+        <ul class="list-disc pl-6 text-gray-700 space-y-1 text-base">
+          <li>Shields skin from environmental stressors</li>
+          <li>Promotes radiant, nourished complexion</li>
+          <li>100% natural, Ayurvedic ingredients</li>
+          <li>Free from parabens, sulfates, and artificial fragrances</li>
+          <li>Suitable for all skin types</li>
+        </ul>
+      </div>
+      <div class="flex-1 flex items-center justify-center order-2 md:order-2">
+        <img src="./Photos/rits2.png" alt="Benefits" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl border-2 border-[#8B4513] shadow" />
+      </div>
+    </section>
+    <section class="flex flex-col md:flex-row gap-6 items-center bg-white/80 border rounded-xl p-6">
+      <div class="flex-1 flex items-center justify-center order-2 md:order-1">
+        <img src="./Photos/rits3.png" alt="How to Use" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl border-2 border-[#8B4513] shadow" />
+      </div>
+      <div class="flex-1 flex flex-col gap-2 order-1 md:order-2">
+        <h2 class="text-xl font-bold text-[#18382c] mb-2">How to Use</h2>
+        <div class="text-gray-700 text-base">Apply 2-3 drops to cleansed face and neck, morning and night. Gently massage until absorbed. Follow with your favorite moisturizer.</div>
+      </div>
+    </section>
+    <section class="flex flex-col md:flex-row gap-6 items-center bg-white/80 border rounded-xl p-6">
+      <div class="flex-1 flex flex-col gap-2 order-1 md:order-1">
+        <h2 class="text-xl font-bold text-[#18382c] mb-2">Ingredients</h2>
+        <div class="text-gray-700 text-base">Lotus Extract, Saffron, Ashwagandha, Rosehip Oil, Himalayan Botanicals, Vitamin E, Essential Oils Blend.</div>
+      </div>
+      <div class="flex-1 flex items-center justify-center order-2 md:order-2">
+        <img src="./Photos/herbal.png" alt="Ingredients" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl border-2 border-[#8B4513] shadow" />
+      </div>
+    </section>
+    <!-- <section class="flex flex-col md:flex-row gap-6 items-center bg-white/80 border rounded-xl p-6">
+      <div class="flex-1 flex items-center justify-center order-2 md:order-1">
+        <img src="./Photos/rits4.png" alt="Shipping & Returns" class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-xl border-2 border-[#8B4513] shadow" />
+      </div>
+      <div class="flex-1 flex flex-col gap-2 order-1 md:order-2">
+        <h2 class="text-xl font-bold text-[#18382c] mb-2">Shipping & Returns</h2>
+        <div class="text-gray-700 text-base">Free shipping on orders over Rs5,000. Returns accepted within 7 days of delivery if unopened and unused.</div>
+      </div>
+    </section> -->
+  </section>
+
     </div>
-    <div class="flex flex-col gap-1">
-      <span class="font-semibold text-[#333] text-2xl">Rs13,300 NPR - Rs26,500 NPR</span>
-      <span class="line-through text-[#999] text-base">Rs14,800 NPR - Rs29,500 NPR</span>
-    </div>
-    <p class="text-lg text-gray-700">
-      Experience the power of Himalayan botanicals with our signature "I Am Protected" serum. Crafted with pure, natural ingredients, this formula helps shield your skin from environmental stressors, leaving it radiant and nourished.
-    </p>
-    <div>
-      <label for="size" class="block text-sm font-medium mb-1">Size</label>
-      <select id="size" class="px-4 py-2 border border-gray-300 rounded-md bg-white text-base cursor-pointer">
-        <option>30mL</option>
-        <option>50mL</option>
-      </select>
-    </div>
-    <button class="bg-[#18382c] hover:bg-[#285c44] text-white px-8 py-3 rounded-lg font-semibold text-lg transition w-full md:w-auto">
-      Add to Cart
-    </button>
-  </div>
-</main>
+  </main>
 
   <!-- ======= SIMILAR PRODUCTS SECTION ======= -->
   <section class="max-w-5xl mx-auto px-4 py-10">

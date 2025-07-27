@@ -15,84 +15,80 @@
   <!-- Google Fonts: Serif + Sans-Serif -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"/>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 overflow-x-hidden">
   <!-- ======= NAVBAR ======= -->
-  <nav class="sticky top-0 z-50 bg-white border-b shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 relative">
-        <!-- Left Nav Links -->
-        <div class="hidden md:flex space-x-6 text-sm uppercase font-medium">
+  <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-[#e5e5e5] shadow-lg transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="flex items-center h-20 relative">
+        <!-- Left Logo and Nav Links -->
+        <div class="flex items-center flex-1">
+          <!-- Left Logo -->
+          <a href="index.html" class="flex items-center gap-2 group mr-6">
+            <img src="Photos/image.png" alt="Hariyali Logo" class="h-16 w-16 object-cover rounded-full border-2 border-sage shadow-lg group-hover:scale-105 transition-transform duration-200" />
+            <!-- <span class="text-xl font-extrabold tracking-wider text-sage drop-shadow group-hover:text-[#18382c] transition-colors duration-200 font-playfair hidden md:inline">Hariyali</span> -->
+          </a>
+          <!-- Left Nav Links -->
+          <div class="hidden md:flex space-x-8 text-base font-semibold justify-start text-[#18382c]">
+          <!-- Shop Dropdown -->
           <div class="group relative">
-            <button class="hover:text-sage">Shop</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md border rounded mt-2 z-10 min-w-[180px]">
+            <button class="hover:text-sage transition-colors duration-200 px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage">Shop</button>
+            <div class="absolute hidden group-hover:block bg-white/95 shadow-lg border border-sage rounded-xl mt-2 z-20 min-w-[180px] animate-fadeIn">
               <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Skin</a>
               <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Hair</a>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Add+</a>
-              <div class="border-t my-1"></div>
-              <span class="block px-4 py-2 text-xs text-gray-500 font-semibold uppercase tracking-wider">Shop by concern</span>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Wrinkle</a>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Acne</a>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Hair loss</a>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Daily Essentials</a>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Blackheads</a>
-              <a href="shop.html" class="block px-4 py-2 hover:bg-gray-100">Dry Skin</a>
             </div>
           </div>
-
+          <!-- Digital Guides Dropdown -->
           <div class="group relative">
-            <button class="hover:text-sage">Guides</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md border rounded mt-2 z-10">
-              <a href="digital.html" class="block px-4 py-2 hover:bg-gray-100">Digital Guides</a>
+            <button class="hover:text-sage transition-colors duration-200 px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage">Digital Guides</button>
+            <div class="absolute hidden group-hover:block bg-white/95 shadow-lg border border-sage rounded-xl mt-2 z-20 min-w-[180px] animate-fadeIn">
+              <a href="digital.html" class="block px-4 py-2 hover:bg-gray-100">Guides</a>
               <a href="blog.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
             </div>
           </div>
-
+          <!-- Ayuretreat Dropdown -->
           <div class="group relative">
-            <button class="hover:text-sage">Ayuretreat</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md border rounded mt-2 z-10">
+            <button class="hover:text-sage transition-colors duration-200 px-2 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage">Ayuretreat</button>
+            <div class="absolute hidden group-hover:block bg-white/95 shadow-lg border border-sage rounded-xl mt-2 z-20 min-w-[220px] animate-fadeIn">
+              <a href="#" class="block px-4 py-2 text-xs text-gray-500 font-semibold uppercase tracking-wider cursor-default">Network Partners</a>
+              <div class="border-t my-1"></div>
               <a href="Ayuretreat.html" class="block px-4 py-2 hover:bg-gray-100">Upcoming Retreats</a>
-              <!-- <a href="Ayuretreat.html" class="block px-4 py-2 hover:bg-gray-100">Waitlist Interest</a>
-              <a href="Ayuretreat.html" class="block px-4 py-2 hover:bg-gray-100">Form Fill Up</a> -->
+              <a href="Ayuretreat.html#illness" class="block px-4 py-2 hover:bg-gray-100">Illness Retreat</a>
+              <a href="Ayuretreat.html#waitlist" class="block px-4 py-2 hover:bg-gray-100">Waitlist Your Interest</a>
+              <a href="Ayuretreat.html#form" class="block px-4 py-2 hover:bg-gray-100">Form Fill Up</a>
             </div>
           </div>
-
-          <div class="group relative">
-            <button class="hover:text-sage">About Us</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md border rounded mt-2 z-10">
-              <a href="our_story.html" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
-              <a href="our_principle.html" class="block px-4 py-2 hover:bg-gray-100">Our Principles</a>
-            </div>
-          </div>
-
-          <div class="group relative">
-            <button class="hover:text-sage">Membership</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md border rounded mt-2 z-10 w-64">
-              <a href="https://nas.io" target="_blank" class="block px-4 py-2 hover:bg-gray-100">nas.io</a>
-              <a href="club.html" class="block px-4 py-2 hover:bg-gray-100">Hariyali Club</a>
-              <!-- <p class="px-4 py-2 text-sm text-gray-600">Inquire via Daraz for discounts or complimentary products.</p> -->
-            </div>
-          </div>
-
-          <div class="group relative">
-            <button class="hover:text-sage">Contact Us</button>
-            <div class="absolute hidden group-hover:block bg-white shadow-md border rounded mt-2 z-10">
-              <a href="contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
-            </div>
-          </div>
-          </div>
+        </div>
+        </div>
         <!-- Center Logo -->
-       <div class="absolute left-[52%] transform -translate-x-1/2">
-        <a href="index.html" class="text-xl font-bold tracking-wider text-sage">Hariyali</a>
+      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 z-30">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="Photos/image.png" alt="Hariyali Logo" class="h-16 w-16 object-cover rounded-full border-2 border-sage shadow-lg group-hover:scale-105 transition-transform duration-200" />
+          <!-- <span class="text-2xl font-extrabold tracking-wider text-sage drop-shadow group-hover:text-[#18382c] transition-colors duration-200 font-playfair">Hariyali</span> -->
+        </a>
       </div>
 
         <!-- Right Icons -->
-        <div class="flex items-center space-x-4 text-lg">
-          <button class="hover:text-sage"><i class="fas fa-search"></i></button>
-          <button class="hover:text-sage"><i class="fas fa-user"></i></button>
-          <a href="https://www.daraz.com.np" target="_blank" class="hover:text-sage">
+        <div class="flex items-center space-x-5 text-lg flex-1 justify-end">
+          <!-- About Us Dropdown -->
+          <a href="aboutus.html" class="ml-6 px-4 py-2 rounded-full hover:bg-sage hover:text-white font-semibold hidden md:inline-block transition-all duration-200">About Us</a>
+          <!-- Membership Dropdown -->
+          <div class="group relative hidden md:inline-block">
+            <button class="ml-2 px-4 py-2 rounded-full hover:bg-sage hover:text-white font-semibold transition-all duration-200 flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-sage">
+              Membership <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="absolute hidden group-hover:block bg-white/95 shadow-lg border border-sage rounded-xl mt-2 z-20 min-w-[220px] animate-fadeIn right-0">
+              <a href="https://nas.io" target="_blank" class="block px-4 py-2 hover:bg-gray-100">nas.io</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Discount for Membership</a>
+              <div class="border-t my-1"></div>
+              <span class="block px-4 py-2 text-xs text-gray-500 font-semibold">Inquire with Daraz for unique code or complimentary product</span>
+            </div>
+          </div>
+          <!-- Search Bar -->
+          <button class="hover:text-sage bg-white/70 border border-sage rounded-full p-2 shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sage"><i class="fas fa-search"></i></button>
+          <!-- Shop Icon (Daraz) -->
+          <a href="https://www.daraz.com.np" target="_blank" class="hover:text-sage bg-white/70 border border-sage rounded-full p-2 shadow transition-all duration-200">
             <i class="fas fa-shopping-bag"></i>
           </a>
-
           <!-- Mobile Menu Icon -->
           <div class="md:hidden">
             <button id="mobile-toggle" class="text-2xl focus:outline-none">
@@ -117,220 +113,162 @@
   </nav>
 
   <!-- ======= HERO VIDEO ======= -->
-  <section class="w-full h-[60vw] max-h-[400px] md:h-screen md:max-h-none overflow-hidden relative">
-    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+
+  <section class="w-full min-h-[400px] md:min-h-screen overflow-hidden relative flex items-center justify-center pt-24 sm:pt-28 md:pt-32">
+    <video autoplay muted loop playsinline class="w-full h-full object-cover absolute inset-0 z-0">
       <source src="Media/test.mp4" type="video/mp4">
     </video>
-  </section>
-
-  <!-- ======= TEXT & CTA SECTION BELOW VIDEO ======= -->
-  <section class="bg-white py-16 text-center px-6">
-    <h1 class="text-3xl md:text-5xl font-bold text-sage mb-6">
-      Ancient Wisdom. Botanical Beauty. Ayurvedic Healing.
-    </h1>
-    <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto font-light">
-      Inspired by the Himalayan range, made with pure natural ingredients for your well-being.
-    </p>
-    <div class="flex justify-center gap-4 flex-wrap">
-      <a href="shop.html" class="bg-sandalwood text-white hover:opacity-90 px-6 py-2 rounded-full font-medium transition">Shop</a>
-      <a href="digital.html" class="bg-rosewater text-white hover:opacity-90 px-6 py-2 rounded-full font-medium transition">Digital Guides</a>
-      <a href="Ayuretreat.html" class="bg-turmeric text-white hover:opacity-90 px-6 py-2 rounded-full font-medium transition">Ayuretreat</a>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+    <!-- Centered Text & CTA on Video -->
+    <div class="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 sm:px-6">
+      <h1 class="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-6">
+        <span id="hero-typing"></span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto font-light drop-shadow">
+        Inspired by the Himalayan range, made with pure natural ingredients for your well-being.
+      </p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="shop.html" class="bg-sandalwood text-white hover:opacity-90 px-6 py-2 rounded-full font-medium transition">Shop</a>
+        <a href="digital.html" class="bg-rosewater text-white hover:opacity-90 px-6 py-2 rounded-full font-medium transition">Digital Guides</a>
+        <a href="Ayuretreat.html" class="bg-turmeric text-white hover:opacity-90 px-6 py-2 rounded-full font-medium transition">Ayuretreat</a>
+      </div>
     </div>
+
   </section>
 
   <!-- ======= PRODUCT SLIDER SECTION ======= -->
-  <section class="py-16 px-4 bg-[#fffaf4]">
-  <div class="slider-section">
-    <!-- Vertical Bestsellers Text -->
-    <div class="bestseller-label">
-      <a href="#" class="vertical hidden lg:flex">BESTSELLERS</a>
-      <a href="#" class="horizontal flex lg:hidden">BESTSELLERS</a>
-    </div>
-    <!-- Horizontal Product Slider -->
-    <div class="slider-viewport">
-      <!-- Navigation Arrow Left -->
-      <button class="slider-arrow left" onclick="slideHorizontal(-1)">
-        <svg width="20" height="20" class="md:w-[24px] md:h-[24px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-      </button>
-      <div id="horizontal-slider" class="flex gap-8">
-        <!-- Product Card (Repeat as needed) -->
-        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[350px] w-[350px] flex flex-col items-center animate-fadeIn product-card">
-          <div class="w-[200px] h-[200px] flex items-center justify-center mx-auto">
-            <img src="Photos/pro1.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:200px;max-height:200px;">
-          </div>
-          <div class="flex flex-col gap-2 mt-4 items-center w-full">
-            <a href="product-details.html" class="text-[1.5rem] font-semibold font-playfair text-[#333] leading-snug hover:underline">
-              I Am Protected
-            </a>
-            <div class="flex items-center gap-2 justify-center">
-              <div class="text-yellow-400 text-[1.1rem]">★★★★☆</div>
-              <span class="text-[#666] text-sm">(183)</span>
-            </div>
-            <div class="flex flex-col gap-1 items-center">
-              <span class="font-semibold text-[#333] text-[1.1rem]">Rs13,300 NPR - Rs26,500 NPR</span>
-              <span class="line-through text-[#999] text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
-            </div>
-            <div class="flex gap-4 items-center mt-2 justify-center w-full">
-              <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-sm cursor-pointer">
-                <option>30mL</option>
-                <option>50mL</option>
-              </select>
-              <button class="border-2 border-[#333] text-[#333] px-6 py-2 text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[350px] w-[350px] flex flex-col items-center animate-fadeIn product-card">
-          <div class="w-[200px] h-[200px] flex items-center justify-center mx-auto">
-            <img src="Photos/pro2.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:200px;max-height:200px;">
-          </div>
-          <div class="flex flex-col gap-2 mt-4 items-center w-full">
-            <a href="product-details.html" class="text-[1.5rem] font-semibold font-playfair text-[#333] leading-snug hover:underline">
-              I Am Protected
-            </a>
-            <div class="flex items-center gap-2 justify-center">
-              <div class="text-yellow-400 text-[1.1rem]">★★★★☆</div>
-              <span class="text-[#666] text-sm">(183)</span>
-            </div>
-            <div class="flex flex-col gap-1 items-center">
-              <span class="font-semibold text-[#333] text-[1.1rem]">Rs13,300 NPR - Rs26,500 NPR</span>
-              <span class="line-through text-[#999] text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
-            </div>
-            <div class="flex gap-4 items-center mt-2 justify-center w-full">
-              <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-sm cursor-pointer">
-                <option>30mL</option>
-                <option>50mL</option>
-              </select>
-              <button class="border-2 border-[#333] text-[#333] px-6 py-2 text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[350px] w-[350px] flex flex-col items-center animate-fadeIn product-card">
-          <div class="w-[200px] h-[200px] flex items-center justify-center mx-auto">
-            <img src="Photos/pro3.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:200px;max-height:200px;">
-          </div>
-          <div class="flex flex-col gap-2 mt-4 items-center w-full">
-            <a href="product-details.html" class="text-[1.5rem] font-semibold font-playfair text-[#333] leading-snug hover:underline">
-              I Am Protected
-            </a>
-            <div class="flex items-center gap-2 justify-center">
-              <div class="text-yellow-400 text-[1.1rem]">★★★★☆</div>
-              <span class="text-[#666] text-sm">(183)</span>
-            </div>
-            <div class="flex flex-col gap-1 items-center">
-              <span class="font-semibold text-[#333] text-[1.1rem]">Rs13,300 NPR - Rs26,500 NPR</span>
-              <span class="line-through text-[#999] text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
-            </div>
-            <div class="flex gap-4 items-center mt-2 justify-center w-full">
-              <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-sm cursor-pointer">
-                <option>30mL</option>
-                <option>50mL</option>
-              </select>
-              <button class="border-2 border-[#333] text-[#333] px-6 py-2 text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[350px] w-[350px] flex flex-col items-center animate-fadeIn product-card">
-          <div class="w-[200px] h-[200px] flex items-center justify-center mx-auto">
-            <img src="Photos/pro4.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:200px;max-height:200px;">
-          </div>
-          <div class="flex flex-col gap-2 mt-4 items-center w-full">
-            <a href="product-details.html" class="text-[1.5rem] font-semibold font-playfair text-[#333] leading-snug hover:underline">
-              I Am Protected
-            </a>
-            <div class="flex items-center gap-2 justify-center">
-              <div class="text-yellow-400 text-[1.1rem]">★★★★☆</div>
-              <span class="text-[#666] text-sm">(183)</span>
-            </div>
-            <div class="flex flex-col gap-1 items-center">
-              <span class="font-semibold text-[#333] text-[1.1rem]">Rs13,300 NPR - Rs26,500 NPR</span>
-              <span class="line-through text-[#999] text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
-            </div>
-            <div class="flex gap-4 items-center mt-2 justify-center w-full">
-              <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-sm cursor-pointer">
-                <option>30mL</option>
-                <option>50mL</option>
-              </select>
-              <button class="border-2 border-[#333] text-[#333] px-6 py-2 text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
-            </div>
-          </div>
-        </div>
 
-        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[350px] w-[350px] flex flex-col items-center animate-fadeIn product-card">
-          <div class="w-[200px] h-[200px] flex items-center justify-center mx-auto">
-            <img src="/placeholder.svg?height=300&width=250" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:200px;max-height:200px;">
-          </div>
-          <div class="flex flex-col gap-2 mt-4 items-center w-full">
-            <a href="product-details.html" class="text-[1.5rem] font-semibold font-playfair text-[#333] leading-snug hover:underline">
-              I Am Protected
-            </a>
-            <div class="flex items-center gap-2 justify-center">
-              <div class="text-yellow-400 text-[1.1rem]">★★★★☆</div>
-              <span class="text-[#666] text-sm">(183)</span>
-            </div>
-            <div class="flex flex-col gap-1 items-center">
-              <span class="font-semibold text-[#333] text-[1.1rem]">Rs13,300 NPR - Rs26,500 NPR</span>
-              <span class="line-through text-[#999] text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
-            </div>
-            <div class="flex gap-4 items-center mt-2 justify-center w-full">
-              <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-sm cursor-pointer">
-                <option>30mL</option>
-                <option>50mL</option>
-              </select>
-              <button class="border-2 border-[#333] text-[#333] px-6 py-2 text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[350px] w-[350px] flex flex-col items-center animate-fadeIn product-card">
-          <div class="w-[200px] h-[200px] flex items-center justify-center mx-auto">
-            <img src="/placeholder.svg?height=300&width=250" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:200px;max-height:200px;">
-          </div>
-          <div class="flex flex-col gap-2 mt-4 items-center w-full">                                                  
-            <a href="product-details.html" class="text-[1.5rem] font-semibold font-playfair text-[#333] leading-snug hover:underline">
-              I Am Protected
-            </a>
-            <div class="flex items-center gap-2 justify-center">
-              <div class="text-yellow-400 text-[1.1rem]">★★★★☆</div>
-              <span class="text-[#666] text-sm">(183)</span>
-            </div>
-            <div class="flex flex-col gap-1 items-center">
-              <span class="font-semibold text-[#333] text-[1.1rem]">Rs13,300 NPR - Rs26,500 NPR</span>
-              <span class="line-through text-[#999] text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
-            </div>
-            <div class="flex gap-4 items-center mt-2 justify-center w-full">
-              <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-sm cursor-pointer">
-                <option>30mL</option>
-                <option>50mL</option>
-              </select>
-              <button class="border-2 border-[#333] text-[#333] px-6 py-2 text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
+  <section class="py-10 px-2 sm:py-16 sm:px-4 bg-[#fffaf4]">
+    <div class="slider-section w-full">
+      <!-- Vertical Bestsellers Text -->
+      <div class="bestseller-label">
+        <a href="#" class="vertical hidden lg:flex">BESTSELLERS</a>
+        <a href="#" class="horizontal flex lg:hidden">BESTSELLERS</a>
       </div>
-      <!-- Navigation Arrow Right -->
-      <button class="slider-arrow right" onclick="slideHorizontal(1)">
-        <svg width="18" height="18" class="md:w-[24px] md:h-[24px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9 6 15 12 9 18"></polyline>
-        </svg>
-      </button>
+      <!-- Horizontal Product Slider -->
+      <div class="slider-viewport w-full overflow-x-auto">
+        <div id="horizontal-slider" class="flex gap-4 sm:gap-8 w-full min-w-0">
+          <!-- Product Card (Repeat as needed) -->
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[220px] sm:min-w-[300px] w-[220px] sm:w-[300px] flex flex-col items-center animate-fadeIn product-card">
+            <div class="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] flex items-center justify-center mx-auto">
+              <img src="Photos/pro1.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:180px;max-height:180px;">
+            </div>
+            <div class="flex flex-col gap-2 mt-4 items-center w-full">
+              <a href="product-details.html" class="text-lg sm:text-xl font-semibold font-playfair text-[#333] leading-snug hover:underline">
+                I Am Protected
+              </a>
+              <div class="flex items-center gap-2 justify-center">
+                <div class="text-yellow-400 text-base sm:text-lg">★★★★☆</div>
+                <span class="text-[#666] text-xs sm:text-sm">(183)</span>
+              </div>
+              <div class="flex flex-col gap-1 items-center">
+                <span class="font-semibold text-[#333] text-base sm:text-lg">Rs13,300 NPR - Rs26,500 NPR</span>
+                <span class="line-through text-[#999] text-xs sm:text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
+              </div>
+              <div class="flex gap-4 items-center mt-2 justify-center w-full">
+                <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-xs sm:text-sm cursor-pointer">
+                  <option>30mL</option>
+                  <option>50mL</option>
+                </select>
+                <button class="border-2 border-[#333] text-[#333] px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other product cards, updating src and details as needed -->
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[220px] sm:min-w-[300px] w-[220px] sm:w-[300px] flex flex-col items-center animate-fadeIn product-card">
+            <div class="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] flex items-center justify-center mx-auto">
+              <img src="Photos/pro2.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:180px;max-height:180px;">
+            </div>
+            <div class="flex flex-col gap-2 mt-4 items-center w-full">
+              <a href="product-details.html" class="text-lg sm:text-xl font-semibold font-playfair text-[#333] leading-snug hover:underline">
+                I Am Protected
+              </a>
+              <div class="flex items-center gap-2 justify-center">
+                <div class="text-yellow-400 text-base sm:text-lg">★★★★☆</div>
+                <span class="text-[#666] text-xs sm:text-sm">(183)</span>
+              </div>
+              <div class="flex flex-col gap-1 items-center">
+                <span class="font-semibold text-[#333] text-base sm:text-lg">Rs13,300 NPR - Rs26,500 NPR</span>
+                <span class="line-through text-[#999] text-xs sm:text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
+              </div>
+              <div class="flex gap-4 items-center mt-2 justify-center w-full">
+                <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-xs sm:text-sm cursor-pointer">
+                  <option>30mL</option>
+                  <option>50mL</option>
+                </select>
+                <button class="border-2 border-[#333] text-[#333] px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[220px] sm:min-w-[300px] w-[220px] sm:w-[300px] flex flex-col items-center animate-fadeIn product-card">
+            <div class="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] flex items-center justify-center mx-auto">
+              <img src="Photos/pro3.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:180px;max-height:180px;">
+            </div>
+            <div class="flex flex-col gap-2 mt-4 items-center w-full">
+              <a href="product-details.html" class="text-lg sm:text-xl font-semibold font-playfair text-[#333] leading-snug hover:underline">
+                I Am Protected
+              </a>
+              <div class="flex items-center gap-2 justify-center">
+                <div class="text-yellow-400 text-base sm:text-lg">★★★★☆</div>
+                <span class="text-[#666] text-xs sm:text-sm">(183)</span>
+              </div>
+              <div class="flex flex-col gap-1 items-center">
+                <span class="font-semibold text-[#333] text-base sm:text-lg">Rs13,300 NPR - Rs26,500 NPR</span>
+                <span class="line-through text-[#999] text-xs sm:text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
+              </div>
+              <div class="flex gap-4 items-center mt-2 justify-center w-full">
+                <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-xs sm:text-sm cursor-pointer">
+                  <option>30mL</option>
+                  <option>50mL</option>
+                </select>
+                <button class="border-2 border-[#333] text-[#333] px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 min-w-[220px] sm:min-w-[300px] w-[220px] sm:w-[300px] flex flex-col items-center animate-fadeIn product-card">
+            <div class="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] flex items-center justify-center mx-auto">
+              <img src="Photos/pro4.png" alt="I Am Protected" class="w-full h-full object-cover rounded-md" style="max-width:180px;max-height:180px;">
+            </div>
+            <div class="flex flex-col gap-2 mt-4 items-center w-full">
+              <a href="product-details.html" class="text-lg sm:text-xl font-semibold font-playfair text-[#333] leading-snug hover:underline">
+                I Am Protected
+              </a>
+              <div class="flex items-center gap-2 justify-center">
+                <div class="text-yellow-400 text-base sm:text-lg">★★★★☆</div>
+                <span class="text-[#666] text-xs sm:text-sm">(183)</span>
+              </div>
+              <div class="flex flex-col gap-1 items-center">
+                <span class="font-semibold text-[#333] text-base sm:text-lg">Rs13,300 NPR - Rs26,500 NPR</span>
+                <span class="line-through text-[#999] text-xs sm:text-sm">Rs14,800 NPR - Rs29,500 NPR</span>
+              </div>
+              <div class="flex gap-4 items-center mt-2 justify-center w-full">
+                <select class="px-4 py-2 border border-gray-300 rounded-md bg-white text-xs sm:text-sm cursor-pointer">
+                  <option>30mL</option>
+                  <option>50mL</option>
+                </select>
+                <button class="border-2 border-[#333] text-[#333] px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold rounded-md uppercase hover:bg-[#333] hover:text-white transition-all duration-300">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Add more product cards as needed, using the same structure -->
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
 
   <!-- ======= SKINCARE QUIZ SECTION ======= -->
-  <section class="w-full bg-[#fdfaf6] py-20 px-4 flex flex-col md:flex-row items-center justify-center gap-16">
+  <section class="w-full bg-[#fdfaf6] py-10 px-2 sm:py-20 sm:px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
     <!-- Image grid (2x2) -->
-    <div class="grid grid-cols-2 gap-4 w-full max-w-lg md:max-w-xl">
+    <div class="grid grid-cols-2 gap-2 sm:gap-4 w-full max-w-xs sm:max-w-lg md:max-w-xl mb-8 md:mb-0">
       <img src="Photos/rits1.png" alt="" class="w-full h-56 md:h-64 object-cover rounded-xl"/>
       <img src="Photos/rits2.png" alt="" class="w-full h-56 md:h-64 object-cover rounded-xl"/>
       <img src="Photos/rits3.png" alt="" class="w-full h-56 md:h-64 object-cover rounded-xl"/>
       <img src="Photos/rits4.png" alt="" class="w-full h-56 md:h-64 object-cover rounded-xl"/>
     </div>
     <!-- Quiz text and button -->
-    <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-2xl">
+    <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl sm:max-w-2xl">
       <h2 class="text-4xl md:text-6xl font-bold text-[#18382c] mb-6 leading-tight">
         SKINCARE<br>
         <span class="italic font-playfair text-5xl md:text-7xl font-bold">Ritual Quiz</span>
@@ -341,39 +279,51 @@
   </section>
 
   <!-- ======= SHOP BY CONCERN SECTION ======= -->
-  <section class="w-full bg-[#18382c] py-10 px-4 flex flex-col items-center">
-    <div class="flex flex-wrap justify-center gap-6 text-base md:text-lg font-medium">
-      <a href="#" class="relative flex items-center justify-center bg-white border border-[#e5e5e5] rounded-lg w-28 h-28 md:w-36 md:h-36 hover:bg-[#f5f5f5] transition">
-        <img src="Photos/concern-wrinkle.jpeg" alt="Wrinkle" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"/>
-        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Wrinkle</span>
+  <section class="w-full bg-[#18382c] py-8 px-2 sm:py-10 sm:px-4 flex flex-col items-center">
+    <div class="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm sm:text-base md:text-lg font-medium">
+      <a href="#" class="relative flex flex-col items-center justify-center w-32 h-40 md:w-40 md:h-48 group">
+        <span class="flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-sage shadow-lg bg-white transition-transform duration-200 group-hover:scale-105">
+          <img src="Photos/concern-wrinkle.jpeg" alt="Wrinkle" class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-xl"/>
+        </span>
+        <span class="mt-4 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Wrinkle</span>
       </a>
-      <a href="#" class="relative flex items-center justify-center bg-white border border-[#e5e5e5] rounded-lg w-28 h-28 md:w-36 md:h-36 hover:bg-[#f5f5f5] transition">
-        <img src="Photos/acne.png" alt="Acne" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"/>
-        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Acne</span>
+      <a href="#" class="relative flex flex-col items-center justify-center w-32 h-40 md:w-40 md:h-48 group">
+        <span class="flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-sage shadow-lg bg-white transition-transform duration-200 group-hover:scale-105">
+          <img src="Photos/acne.png" alt="Acne" class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-xl"/>
+        </span>
+        <span class="mt-4 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Acne</span>
       </a>
-      <a href="#" class="relative flex items-center justify-center bg-white border border-[#e5e5e5] rounded-lg w-28 h-28 md:w-36 md:h-36 hover:bg-[#f5f5f5] transition">
-        <img src="Photos/hair_loss.png" alt="Hair loss" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"/>
-        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Hair loss</span>
+      <a href="#" class="relative flex flex-col items-center justify-center w-32 h-40 md:w-40 md:h-48 group">
+        <span class="flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-sage shadow-lg bg-white transition-transform duration-200 group-hover:scale-105">
+          <img src="Photos/hair_loss.png" alt="Hair loss" class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-xl"/>
+        </span>
+        <span class="mt-4 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Hair loss</span>
       </a>
-      <a href="#" class="relative flex items-center justify-center bg-white border border-[#e5e5e5] rounded-lg w-28 h-28 md:w-36 md:h-36 hover:bg-[#f5f5f5] transition">
-        <img src="Photos/daily.png" alt="Daily Essentials" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"/>
-        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Daily Essentials</span>
+      <a href="#" class="relative flex flex-col items-center justify-center w-32 h-40 md:w-40 md:h-48 group">
+        <span class="flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-sage shadow-lg bg-white transition-transform duration-200 group-hover:scale-105">
+          <img src="Photos/daily.png" alt="Daily Essentials" class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-xl"/>
+        </span>
+        <span class="mt-4 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Daily Essentials</span>
       </a>
-      <a href="#" class="relative flex items-center justify-center bg-white border border-[#e5e5e5] rounded-lg w-28 h-28 md:w-36 md:h-36 hover:bg-[#f5f5f5] transition">
-        <img src="Photos/blackheads.png" alt="Blackheads" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"/>
-        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Blackheads</span>
+      <a href="#" class="relative flex flex-col items-center justify-center w-32 h-40 md:w-40 md:h-48 group">
+        <span class="flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-sage shadow-lg bg-white transition-transform duration-200 group-hover:scale-105">
+          <img src="Photos/blackheads.png" alt="Blackheads" class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-xl"/>
+        </span>
+        <span class="mt-4 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Blackheads</span>
       </a>
-      <a href="#" class="relative flex items-center justify-center bg-white border border-[#e5e5e5] rounded-lg w-28 h-28 md:w-36 md:h-36 hover:bg-[#f5f5f5] transition">
-        <img src="Photos/dryskin.png" alt="Dry Skin" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"/>
-        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Dry Skin</span>
+      <a href="#" class="relative flex flex-col items-center justify-center w-32 h-40 md:w-40 md:h-48 group">
+        <span class="flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-sage shadow-lg bg-white transition-transform duration-200 group-hover:scale-105">
+          <img src="Photos/dryskin.png" alt="Dry Skin" class="w-20 h-20 md:w-28 md:h-28 object-cover rounded-xl"/>
+        </span>
+        <span class="mt-4 bg-black bg-opacity-60 text-white text-xs md:text-base px-3 py-1 rounded pointer-events-none">Dry Skin</span>
       </a>
     </div>
   </section>
 
   <!-- ======= COMMUNITY TESTIMONIALS SECTION ======= -->
-  <section class="w-full bg-[#fdfaf6] py-16 px-4 flex flex-col items-center">
+  <section class="w-full bg-[#fdfaf6] py-10 px-2 sm:py-16 sm:px-4 flex flex-col items-center">
     <h3 class="text-2xl md:text-3xl font-bold text-[#18382c] mb-8">Hariyali Community <span class="text-[#8B4513]">|</span> Testimonials / Love Notes</h3>
-    <div class="w-full max-w-2xl relative">
+    <div class="w-full max-w-md sm:max-w-2xl relative">
       <div id="testimonial-rotator" class="text-center">
         <blockquote class="text-xl md:text-2xl italic text-[#18382c] font-playfair min-h-[100px]" id="testimonial-quote">
           "The products have transformed my skin! Love the natural feel."
@@ -384,6 +334,56 @@
       </div>
     </div>
   </section>
+
+    <!-- ======= BLOG SECTION ======= -->
+    <section class="w-full bg-white py-10 px-2 sm:py-16 sm:px-4 flex flex-col items-center">
+      <h3 class="text-2xl md:text-3xl font-bold text-[#18382c] mb-10">From Our Blog</h3>
+      <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Blog Card 1 -->
+        <div class="bg-[#fdfaf6] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 h-full">
+          <img src="Photos/collagen.png" alt="Blog 1" class="w-full h-32 sm:h-40 md:h-48 object-cover"/>
+          <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+            <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#18382c] mb-1 sm:mb-2 font-playfair">The Science of Collagen in Ayurveda</h4>
+            <p class="text-gray-700 mb-2 sm:mb-4 flex-1 text-xs sm:text-sm md:text-base">Discover how ancient Ayurvedic wisdom and modern science combine to support healthy, glowing skin through collagen-boosting rituals.</p>
+            <a href="blog.html" class="text-sage font-semibold hover:underline mt-auto text-xs sm:text-sm">Read More</a>
+          </div>
+        </div>
+        <!-- Blog Card 2 -->
+        <div class="bg-[#fdfaf6] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 h-full">
+          <img src="Photos/herbal.png" alt="Blog 2" class="w-full h-32 sm:h-40 md:h-48 object-cover"/>
+          <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+            <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#18382c] mb-1 sm:mb-2 font-playfair">Herbal Rituals for Everyday Wellness</h4>
+            <p class="text-gray-700 mb-2 sm:mb-4 flex-1 text-xs sm:text-sm md:text-base">Explore simple, effective herbal routines you can add to your daily life for better health, balance, and beauty—rooted in Ayurveda.</p>
+            <a href="blog.html" class="text-sage font-semibold hover:underline mt-auto text-xs sm:text-sm">Read More</a>
+          </div>
+        </div>
+        <!-- Blog Card 3 -->
+        <div class="bg-[#fdfaf6] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 h-full">
+          <img src="Photos/rits2.png" alt="Blog 3" class="w-full h-32 sm:h-40 md:h-48 object-cover"/>
+          <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+            <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#18382c] mb-1 sm:mb-2 font-playfair">Mindful Living: 7-Day Challenge</h4>
+            <p class="text-gray-700 mb-2 sm:mb-4 flex-1 text-xs sm:text-sm md:text-base">Join our week-long challenge to bring more mindfulness, self-care, and joy into your daily routine—one ritual at a time.</p>
+            <a href="blog.html" class="text-sage font-semibold hover:underline mt-auto text-xs sm:text-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= AYURETREAT SECTION ======= -->
+    <section class="w-full bg-[#fffaf4] py-6 px-2 sm:py-10 sm:px-4 flex flex-col items-center">
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#18382c] mb-6 sm:mb-8">Ayuretreat: Rejuvenate &amp; Heal</h3>
+      <div class="w-full max-w-2xl sm:max-w-3xl md:max-w-5xl flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-10">
+        <img src="Photos/rits1.png" alt="Ayuretreat" class="w-full md:w-1/2 h-32 sm:h-48 md:h-64 object-cover rounded-2xl shadow-lg mb-4 md:mb-0"/>
+        <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left mt-2 md:mt-0">
+          <h4 class="text-base sm:text-xl md:text-2xl font-bold text-[#18382c] mb-2 sm:mb-3 font-playfair">Experience the Healing Power of Ayurveda</h4>
+          <p class="text-sm sm:text-lg text-[#18382c] mb-4 sm:mb-6">Join our upcoming Ayuretreats for a transformative journey of wellness, self-discovery, and ancient healing rituals in the heart of nature. Limited seats available!</p>
+          <div class="flex gap-2 sm:gap-4 flex-wrap justify-center md:justify-start">
+            <a href="Ayuretreat.html" class="bg-turmeric text-white px-4 py-2 sm:px-8 sm:py-3 rounded-full font-semibold text-sm sm:text-lg hover:opacity-90 transition">Upcoming Retreats</a>
+            <a href="Ayuretreat.html#form" class="bg-sage text-white px-4 py-2 sm:px-8 sm:py-3 rounded-full font-semibold text-sm sm:text-lg hover:opacity-90 transition">Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- ======= CHATBOT FLOATING BUTTON & POPUP ======= -->
 <div id="chatbot-btn" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
@@ -405,89 +405,170 @@
 </div>
 
   <footer class="w-full bg-[#18382c] text-white py-6 px-4 mt-0 border-t border-[#2c3e50] shadow-inner">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-4">
-    <!-- Brand and Social -->
-    <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
-      <a href="index.html" class="text-2xl font-bold font-playfair tracking-wider mb-1">Hariyali Botanic</a>
-      <p class="text-sm md:text-base text-gray-200 mb-1">Ancient Wisdom. Botanical Beauty. Ayurvedic Healing.</p>
-      <div class="flex space-x-3 mt-1">
-        <a href="https://www.facebook.com" target="_blank" class="hover:text-[#8B4513]"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com" target="_blank" class="hover:text-[#8B4513]"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.daraz.com.np" target="_blank" class="hover:text-[#8B4513]"><i class="fas fa-shopping-bag"></i></a>
-      </div>
-    </div>
-    <!-- Quick Links -->
-    <div class="flex-1 flex flex-col items-center md:items-start mb-6 md:mb-0">
-      <div class="mb-2 font-semibold text-lg">Quick Links</div>
-      <div class="flex flex-wrap gap-2 text-xs md:text-sm text-gray-200">
-        <a href="index.html" class="hover:text-[#8B4513]">Home</a>
-        <span>|</span>
-        <a href="shop.html" class="hover:text-[#8B4513]">Shop</a>
-        <span>|</span>
-        <a href="digital.html" class="hover:text-[#8B4513]">Guide</a>
-        <span>|</span>
-        <a href="ayuretreat.html" class="hover:text-[#8B4513]">Ayuretreat</a>
-        <span>|</span>
-        <a href="club.html" class="hover:text-[#8B4513]">Club</a>
-        <span>|</span>
-        <a href="blog.html" class="hover:text-[#8B4513]">Blog</a>
-        <span>|</span>
-        <a href="contact.html" class="hover:text-[#8B4513]">Contact Us</a>
-      </div>
-      <a href="#" class="block mt-2 text-xs md:text-sm text-gray-400 hover:text-[#8B4513] underline">Terms and Conditions</a>
-    </div>
-    <!-- Email Signup & Message -->
-    <div class="flex-1 flex flex-col items-center md:items-end w-full">
-      <form class="w-full max-w-xs mb-4">
-        <label for="footer-email-signup" class="block text-xs text-[#e0e7ef] mb-1">Sign up for updates</label>
-        <div class="flex">
-          <input type="email" id="footer-email-signup" placeholder="Your email" class="flex-1 px-3 py-2 rounded-l-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition text-xs" required>
-          <button type="submit" class="bg-[#8B4513] hover:bg-[#a86c3c] text-white px-3 py-2 rounded-r-lg font-semibold transition text-xs">Sign Up</button>
+  <footer class="w-full bg-gradient-to-tr from-[#18382c] via-[#254d3b] to-[#8B4513] text-white py-10 px-4 mt-0 border-t border-[#2c3e50] shadow-inner">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap justify-between items-stretch gap-8 md:gap-12">
+      <!-- Brand and Social -->
+      <div class="flex flex-col items-center md:items-start mb-8 md:mb-0 w-full sm:w-2/3 md:w-1/3 min-w-[220px]">
+        <div class="flex items-center gap-2 mb-2">
+          <img src="Photos/image.png" alt="Hariyali Logo" class="h-10 w-10 rounded-full border-2 border-sage shadow" />
+          <span class="text-2xl font-bold font-playfair tracking-wider">Hariyali Botanic</span>
         </div>
-      </form>
-      <div class="bg-[#22343a] rounded-xl p-4 shadow-lg border border-[#2c3e50] w-full max-w-xs">
-        <form id="footer-message-form" class="space-y-2">
-          <div>
-            <label for="footer-name" class="block text-xs text-[#e0e7ef] mb-1">Name</label>
-            <input type="text" id="footer-name" name="footer-name" autocomplete="off"
-              class="w-full px-2 py-1 rounded-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition text-xs"
-              required>
+        <p class="text-sm md:text-base text-gray-200 mb-2 text-center md:text-left">Ancient Wisdom. Botanical Beauty. Ayurvedic Healing.</p>
+        <p class="text-xs md:text-sm text-gray-300 mb-4 text-center md:text-left italic">“Nourishing you with the purest botanicals from the Himalayas, blending tradition and science for radiant well-being.”</p>
+        <div class="flex space-x-4 mt-1 justify-center md:justify-start">
+          <a href="https://www.facebook.com" target="_blank" class="hover:text-[#f7c873] text-xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank" class="hover:text-[#f7c873] text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.daraz.com.np" target="_blank" class="hover:text-[#f7c873] text-xl"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="flex-1 flex flex-col items-center md:items-start mb-8 md:mb-0 w-full sm:w-1/2 md:w-1/4 min-w-[180px]">
+        <div class="flex items-center gap-2 mb-2">
+          <i class="fas fa-link text-[#f7c873]"></i>
+          <span class="font-semibold text-lg tracking-wide">Quick Links</span>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs md:text-sm text-gray-200 mb-2">
+          <a href="index.html" class="hover:text-[#f7c873]">Home</a>
+          <span>|</span>
+          <a href="shop.html" class="hover:text-[#f7c873]">Shop</a>
+          <span>|</span>
+          <a href="digital.html" class="hover:text-[#f7c873]">Guide</a>
+          <span>|</span>
+          <a href="ayuretreat.html" class="hover:text-[#f7c873]">Ayuretreat</a>
+          <span>|</span>
+          <a href="club.html" class="hover:text-[#f7c873]">Club</a>
+          <span>|</span>
+          <a href="blog.html" class="hover:text-[#f7c873]">Blog</a>
+          <span>|</span>
+          <a href="contact.html" class="hover:text-[#f7c873]">Contact Us</a>
+        </div>
+        <a href="#" class="block mt-2 text-xs md:text-sm text-gray-400 hover:text-[#f7c873] underline">Terms and Conditions</a>
+      </div>
+      <!-- Email Signup & Message -->
+      <div class="flex-1 flex flex-col items-center md:items-end w-full sm:w-2/3 md:w-1/3 min-w-[220px]">
+        <div class="flex items-center gap-2 mb-2">
+          <i class="fas fa-envelope text-[#f7c873]"></i>
+          <span class="font-semibold text-lg tracking-wide">Stay Connected</span>
+        </div>
+        <form class="w-full max-w-xs mb-4 flex flex-col gap-2">
+          <label for="footer-email-signup" class="block text-xs text-[#e0e7ef] mb-1">Sign up for updates</label>
+          <div class="flex rounded-lg overflow-hidden border border-[#31404d] bg-[#22343a]">
+            <input type="email" id="footer-email-signup" placeholder="Your email" class="flex-1 px-3 py-2 bg-transparent text-white focus:outline-none text-xs" required>
+            <button type="submit" class="bg-[#f7c873] hover:bg-[#8B4513] text-[#18382c] px-4 py-2 font-semibold text-xs transition flex items-center gap-1"><i class="fas fa-paper-plane"></i> Sign Up</button>
           </div>
-          <div>
-            <label for="footer-message" class="block text-xs text-[#e0e7ef] mb-1">Message</label>
-            <textarea id="footer-message" name="footer-message" rows="2"
-              class="w-full px-2 py-1 rounded-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition resize-none text-xs"
-              required></textarea>
-          </div>
-          <button type="submit"
-            class="w-full bg-[#8B4513] hover:bg-[#a86c3c] text-white py-1 rounded-lg font-mono font-semibold text-xs flex items-center justify-center gap-2 transition">
-            <span>&#9993;</span> Send Message
-          </button>
         </form>
-        <div id="footer-message-success" class="hidden text-green-300 mt-2 text-center text-xs">Thank you for your message!</div>
+        <div class="bg-[#22343a]/80 rounded-xl p-4 shadow-lg border border-[#2c3e50] w-full max-w-xs">
+          <form id="footer-message-form" class="space-y-2">
+            <div>
+              <label for="footer-name" class="block text-xs text-[#e0e7ef] mb-1">Name</label>
+              <input type="text" id="footer-name" name="footer-name" autocomplete="off"
+                class="w-full px-2 py-1 rounded-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#f7c873] transition text-xs"
+                required>
+            </div>
+            <div>
+              <label for="footer-message" class="block text-xs text-[#e0e7ef] mb-1">Message</label>
+              <textarea id="footer-message" name="footer-message" rows="2"
+                class="w-full px-2 py-1 rounded-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#f7c873] transition resize-none text-xs"
+                required></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-[#f7c873] hover:bg-[#8B4513] text-[#18382c] py-1 rounded-lg font-mono font-semibold text-xs flex items-center justify-center gap-2 transition">
+              <span><i class="fas fa-paper-plane"></i></span> Send Message
+            </button>
+          </form>
+          <div id="footer-message-success" class="hidden text-green-300 mt-2 text-center text-xs">Thank you for your message!</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="text-center text-xs text-gray-300 mt-4">
-    &copy; 2025 Hariyali Botanic. All rights reserved.
-  </div>
-</footer>
+    <div class="border-t border-[#2c3e50] mt-8 pt-4 text-center text-xs text-gray-300 w-full">
+      &copy; 2025 Hariyali Botanic. All rights reserved.
+    </div>
+    <style>
+      @media (max-width: 768px) {
+        footer .max-w-7xl {
+          flex-direction: column !important;
+          align-items: stretch !important;
+        }
+        footer [class*='w-1/3'],
+        footer [class*='w-1/4'],
+        footer [class*='w-2/3'],
+        footer [class*='w-1/2'] {
+          min-width: 0 !important;
+          width: 100% !important;
+        }
+        footer .flex-1 {
+          width: 100% !important;
+        }
+        footer .mb-8 {
+          margin-bottom: 2rem !important;
+        }
+      }
+      @media (max-width: 480px) {
+        footer .max-w-7xl {
+          padding-left: 0.5rem !important;
+          padding-right: 0.5rem !important;
+        }
+        footer .text-lg, footer .text-xl, footer .text-2xl {
+          font-size: 1rem !important;
+        }
+        footer .p-4, footer .p-3, footer .p-6 {
+          padding: 0.75rem !important;
+        }
+      }
+    </style>
+  </footer>
 
   <script>
+    // Typing animation for hero overlay
+    const heroTexts = [
+      "Ancient Wisdom.",
+      "Botanical Beauty.",
+      "Ayurvedic Healing."
+    ];
+    let heroIndex = 0, charIndex = 0, isDeleting = false;
+    const typingSpeed = 70, erasingSpeed = 40, delayBetween = 1200;
+    const heroTyping = document.getElementById('hero-typing');
+
+    function typeHeroText() {
+      if (!heroTyping) return;
+      const current = heroTexts[heroIndex];
+      if (!isDeleting) {
+        heroTyping.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          isDeleting = true;
+          setTimeout(typeHeroText, delayBetween);
+        } else {
+          setTimeout(typeHeroText, typingSpeed);
+        }
+      } else {
+        heroTyping.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          heroIndex = (heroIndex + 1) % heroTexts.length;
+          setTimeout(typeHeroText, 400);
+        } else {
+          setTimeout(typeHeroText, erasingSpeed);
+        }
+      }
+    }
+    if (heroTyping) typeHeroText();
     const toggle = document.getElementById('mobile-toggle');
     const menu = document.getElementById('mobile-menu');
     toggle.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
 
-    let scrollAmount = 0;
-    const slider = document.getElementById("horizontal-slider");
 
-    function slideHorizontal(direction) {
-      const cardWidth = 368; // width + gap
-      scrollAmount += direction * cardWidth;
-      slider.style.transform = `translateX(-${scrollAmount}px)`;
-    }
+    // Remove manual transform for mobile to prevent overflow
+    // let scrollAmount = 0;
+    // const slider = document.getElementById("horizontal-slider");
+    // function slideHorizontal(direction) {
+    //   const cardWidth = 368; // width + gap
+    //   scrollAmount += direction * cardWidth;
+    //   slider.style.transform = `translateX(-${scrollAmount}px)`;
+    // }
 
     // Rotating testimonials
     const testimonials = [
