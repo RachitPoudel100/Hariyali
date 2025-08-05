@@ -173,43 +173,46 @@ border-radius: 12px;
 .slider-section {
   display: flex;
   flex-direction: row;
-  gap: 4rem; /* increased gap */
+  gap: 2rem; /* reduced gap to move bestseller inward */
   align-items: flex-start;
   width: 100%;
-  max-width: 1950x; /* wider slider */
+  max-width: 1950px;
   margin: 0 auto;
+  padding-left: 1rem; /* added padding to move everything inward */
 }
 .bestseller-label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  min-width: 60px;
-  margin-right: 1rem;
+  min-width: 40px; /* reduced from 60px */
+  margin-right: 0.5rem; /* reduced from 1rem */
 }
 .bestseller-label .vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-size: 1.1rem; /* reduced from 1.5rem */
+  font-family: 'Inter', sans-serif; /* changed from Playfair Display to Inter */
+  font-weight: 600; /* changed from 700 */
   color: #8B4513;
-  letter-spacing: 2px;
+  letter-spacing: 1px; /* reduced from 2px */
   margin-top: 2rem;
   margin-bottom: 0;
   transition: transform 0.2s;
+  text-transform: uppercase;
 }
 .bestseller-label .vertical:hover {
   transform: scale(1.05);
 }
 .bestseller-label .horizontal {
-  font-size: 1.25rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-size: 1rem; /* reduced from 1.25rem */
+  font-family: 'Inter', sans-serif; /* changed from Playfair Display to Inter */
+  font-weight: 600; /* changed from 700 */
   color: #8B4513;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 1px; /* reduced from 2px */
+  margin-bottom: 1rem; /* reduced from 1.5rem */
   transition: transform 0.2s;
+  text-transform: uppercase;
 }
 .bestseller-label .horizontal:hover {
   transform: scale(1.05);
@@ -319,43 +322,46 @@ border-radius: 12px;
 .slider-section {
   display: flex;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: flex-start;
   width: 100%;
   max-width: 1950px;
   margin: 0 auto;
+  padding-left: 1rem;
 }
 .bestseller-label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  min-width: 60px;
-  margin-right: 1rem;
+  min-width: 40px;
+  margin-right: 0.5rem;
 }
 .bestseller-label .vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   color: #8B4513;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 2rem;
   margin-bottom: 0;
   transition: transform 0.2s;
+  text-transform: uppercase;
 }
 .bestseller-label .vertical:hover {
   transform: scale(1.05);
 }
 .bestseller-label .horizontal {
-  font-size: 1.25rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   color: #8B4513;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
   transition: transform 0.2s;
+  text-transform: uppercase;
 }
 .bestseller-label .horizontal:hover {
   transform: scale(1.05);
@@ -537,4 +543,83 @@ footer {
 /* Subtle background accent */
 body {
   background: linear-gradient(120deg, #f7faf7 80%, #e6f2ea 100%);
+}
+
+/* Shop By Concern Styles */
+.grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Enhanced Shop By Concern section styling */
+section.bg-\[\#f7f2ea\] {
+  background: linear-gradient(to right, #f7f2ea, #fdf8f1);
+  box-shadow: inset 0 2px 8px rgba(139, 69, 19, 0.1);
+}
+
+section.bg-\[\#f7f2ea\] h3 {
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+}
+
+section.bg-\[\#f7f2ea\] a.group:hover .bg-\[\#8B4513\] {
+  background-color: #a05a2c;
+}
+
+section.bg-\[\#f7f2ea\] a.group:hover span:first-child {
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.25);
+}
+
+/* Ensure dropdowns open on hover and click for accessibility */
+.group:focus-within .group-hover\:block,
+.group:hover .group-hover\:block {
+  display: block !important;
+}
+.group-hover\:block {
+  display: none;
+}
+.text-sage { color: #2e5d4e; }
+.bg-sage { background-color: #2e5d4e; }
+.hover\:bg-sage:hover { background-color: #3a7a62; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.club-card {
+  background: linear-gradient(120deg, #f7faf7 80%, #e6f2ea 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(46,93,78,0.10);
+  border: 1px solid #e6e6e6;
+  transition: box-shadow 0.3s;
+}
+.club-card:hover {
+  box-shadow: 0 8px 32px rgba(46,93,78,0.18);
+}
+.btn-club {
+  background: #2e5d4e;
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(46,93,78,0.10);
+}
+.btn-club:hover {
+  background: #3a7a62;
+  box-shadow: 0 4px 16px rgba(46,93,78,0.18);
+}
+.club-perk {
+  background: #e6f2ea;
+  color: #2e5d4e;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
 }

@@ -8,25 +8,20 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css"/>
-
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <!-- Google Fonts: Serif + Sans-Serif -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"/>
 </head>
-<body>
+<body class="bg-white text-gray-800 overflow-x-hidden">
   <!-- ======= NAVBAR ======= -->
   <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-[#e5e5e5] shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       <div class="flex items-center h-20 relative">
         <!-- Left Logo and Nav Links -->
         <div class="flex items-center flex-1">
-          <!-- Left Logo -->
-          <a href="index.html" class="flex items-center gap-2 group mr-6">
-            <img src="Photos/image.png" alt="Hariyali Logo" class="h-16 w-16 object-cover rounded-full border-2 border-sage shadow-lg group-hover:scale-105 transition-transform duration-200" />
-            <!-- <span class="text-xl font-extrabold tracking-wider text-sage drop-shadow group-hover:text-[#18382c] transition-colors duration-200 font-playfair hidden md:inline">Hariyali</span> -->
-          </a>
           <!-- Left Nav Links -->
           <div class="hidden md:flex space-x-8 text-base font-semibold justify-start text-[#18382c]">
           <!-- Shop Dropdown -->
@@ -70,10 +65,10 @@
         <!-- Right Icons -->
         <div class="flex items-center space-x-5 text-lg flex-1 justify-end">
           <!-- About Us Dropdown -->
-          <a href="aboutus.html" class="ml-6 px-4 py-2 rounded-full hover:bg-sage hover:text-white font-semibold hidden md:inline-block transition-all duration-200">About Us</a>
+          <a href="aboutus.html" class="ml-6 px-4 py-2 rounded-full  hover:text-sage font-semibold hidden md:inline-block transition-all duration-200">About Us</a>
           <!-- Membership Dropdown -->
           <div class="group relative hidden md:inline-block">
-            <button class="ml-2 px-4 py-2 rounded-full hover:bg-sage hover:text-white font-semibold transition-all duration-200 flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-sage">
+            <button class="ml-2 px-4 py-2 rounded-full  hover:text-sage font-semibold transition-all duration-200 flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-sage">
               Membership <i class="fas fa-chevron-down text-xs"></i>
             </button>
             <div class="absolute hidden group-hover:block bg-white/95 shadow-lg border border-sage rounded-xl mt-2 z-20 min-w-[220px] animate-fadeIn right-0">
@@ -112,203 +107,408 @@
     </div>
   </nav>
 
+
 <!-- ======= DIGITAL GUIDE MAIN SECTION ======= -->
 <section class="w-full bg-gradient-to-br from-green-50 to-orange-50 py-16 px-4 flex flex-col items-center">
-  <!-- Guide Photo Top -->
-  <div class="flex flex-col items-center justify-center w-full mb-8">
-    <img src="Photos/image.png" alt="Digital Guide Main" class="rounded-2xl shadow-xl border-4 border-green-200 w-72 h-72 object-cover mb-6 mx-auto" />
-    <div class="w-full flex flex-col items-center justify-center mb-2">
-      <h1 class="w-full text-4xl md:text-6xl font-extrabold text-green-900 text-center mb-2 tracking-tight">Digital Guide Main</h1>
-      <h2 class="w-full text-3xl md:text-5xl font-bold text-orange-700 text-center mb-4">Unlock Holistic Healing</h2>
-      <p class="w-full max-w-3xl text-lg md:text-2xl text-gray-700 text-center font-medium mx-auto mb-2">Begin your Ayurvedic journey with our Digital Healing Guide. Discover self-paced modules, personalized rituals, and ancient wisdom for modern wellness.</p>
+  <!-- Guide Hero Section - More Seamless Integration -->
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+    <div class="w-full md:w-1/2 flex flex-col items-center md:items-start">
+      <h1 class="text-4xl md:text-5xl font-bold text-green-900 mb-4 font-playfair leading-tight">Digital Healing <span class="text-orange-700">Guide</span></h1>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Begin your Ayurvedic journey with our immersive digital experience. Discover self-paced modules, personalized rituals, and ancient wisdom tailored to your unique constitution and wellness goals.
+      </p>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Self-paced</span>
+        <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Ayurvedic</span>
+        <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Wellness</span>
+        <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Holistic</span>
+      </div>
+      <a href="#pricing" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition shadow-lg flex items-center gap-2">
+        <span>Start Your Journey</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
-    <!-- Membership Purchase Section -->
-    <div class="w-full flex flex-col items-center justify-center mt-6">
-      <div class="bg-gradient-to-r from-orange-400 via-orange-600 to-orange-800 rounded-2xl shadow-2xl p-8 max-w-2xl w-full flex flex-col items-center text-white">
-        <span class="text-4xl font-extrabold mb-2"><i class="fas fa-crown"></i> Become a Member</span>
-        <p class="text-lg md:text-xl font-semibold mb-4 text-center">Get unlimited access to all digital guides, exclusive content, and community support—just like Netflix, but for your wellness journey!</p>
-        <div class="flex flex-col md:flex-row items-center gap-6 mb-4">
-          <div class="bg-white/20 rounded-xl px-6 py-4 flex flex-col items-center">
-            <span class="text-3xl font-bold">NPR 999</span>
-            <span class="text-base">per month</span>
+    <div class="w-full md:w-1/2 relative">
+      <div class="relative z-10">
+        <img src="Photos/image.png" alt="Digital Guide" class="w-full h-auto rounded-lg shadow-xl object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-green-900/40 to-transparent rounded-lg flex items-end">
+          <div class="p-4 text-white">
+            <span class="font-semibold">Transform your wellness journey</span>
           </div>
-          <ul class="text-left list-disc pl-6 text-base">
-            <li>Unlimited access to all guides</li>
-            <li>Exclusive recipes & rituals</li>
-            <li>Community Q&A & support</li>
-            <li>Early access to new modules</li>
-          </ul>
         </div>
-        <a href="https://nas.io/" target="_blank" class="bg-white text-orange-700 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-orange-100 transition text-xl">Join Now</a>
-        <span class="mt-2 text-sm text-orange-100">Cancel anytime. 7-day free trial available.</span>
+      </div>
+      <!-- Decorative elements -->
+      <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-100 rounded-full -z-10"></div>
+      <div class="absolute -top-4 -left-4 w-24 h-24 bg-green-100 rounded-full -z-10"></div>
+    </div>
+  </div>
+  
+  <!-- Guide Features Section - Seamless Image/Text Integration -->
+  <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col">
+      <div class="h-40 bg-green-800 relative overflow-hidden">
+        <img src="Photos/rits1.png" alt="Personalized Rituals" class="w-full h-full object-cover mix-blend-overlay" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <i class="fas fa-leaf text-4xl text-white"></i>
+        </div>
+      </div>
+      <div class="p-5">
+        <h3 class="text-xl font-bold text-green-800 mb-2">Personalized Rituals</h3>
+        <p class="text-gray-600">Discover daily practices tailored to your dosha type that bring balance and harmony to your body and mind.</p>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col">
+      <div class="h-40 bg-orange-700 relative overflow-hidden">
+        <img src="Photos/rits2.png" alt="Ancient Wisdom" class="w-full h-full object-cover mix-blend-overlay" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <i class="fas fa-book-open text-4xl text-white"></i>
+        </div>
+      </div>
+      <div class="p-5">
+        <h3 class="text-xl font-bold text-orange-700 mb-2">Ancient Wisdom</h3>
+        <p class="text-gray-600">Learn time-tested Ayurvedic principles and practices that have supported wellness for thousands of years.</p>
+      </div>
+    </div>
+    
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col">
+      <div class="h-40 bg-green-700 relative overflow-hidden">
+        <img src="Photos/rits3.png" alt="Modern Application" class="w-full h-full object-cover mix-blend-overlay" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <i class="fas fa-mobile-alt text-4xl text-white"></i>
+        </div>
+      </div>
+      <div class="p-5">
+        <h3 class="text-xl font-bold text-green-700 mb-2">Modern Application</h3>
+        <p class="text-gray-600">Integrate ancient practices into your contemporary lifestyle with practical, accessible approaches.</p>
       </div>
     </div>
   </div>
-  <!-- Guide Info Full Width -->
-  <div class="max-w-4xl w-full flex flex-col gap-8">
-    <h2 class="text-4xl font-bold text-green-900 mb-2 text-center">Digital Healing Guide</h2>
-    <div>
-      <h3 class="text-2xl font-semibold text-orange-700 mb-2">Why this guide?</h3>
-      <p class="text-gray-700 mb-4">This guide is designed for anyone seeking holistic healing and balance. Rooted in Ayurvedic wisdom, it covers topics such as PCOS healing, hormonal balance, digestion, and overall well-being. Self-paced modules, practical advice, and personalized rituals help you transform your health naturally.</p>
-    </div>
-    <!-- Unlock Option -->
-    <div class="flex flex-col md:flex-row items-center gap-3 bg-orange-50 border border-orange-200 rounded-lg p-4">
-      <span class="text-orange-700 font-bold text-lg"><i class="fas fa-lock mr-2"></i>Unlock Full Access:</span>
-      <a href="https://nas.io/" target="_blank" class="bg-orange-700 hover:bg-orange-800 text-white px-4 py-2 rounded-full font-semibold transition">Become a Member</a>
-    </div>
-    <!-- Blog Articles -->
-    <div>
-      <h3 class="text-xl font-semibold text-green-700 mb-2">Related Blog Articles</h3>
-      <ul class="list-disc pl-5 text-gray-700">
-        <li><a href="blog.html#ayurveda-pcos" class="text-orange-700 hover:underline">Ayurveda for PCOS & Hormonal Balance</a></li>
-        <li><a href="blog.html#digestive-health" class="text-orange-700 hover:underline">Digestive Health: Ancient Wisdom</a></li>
-        <li><a href="blog.html#self-care" class="text-orange-700 hover:underline">Self-Care Rituals for Women</a></li>
-      </ul>
-    </div>
-    <!-- Duration & Modules -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h4 class="font-semibold text-green-800 mb-1">Duration</h4>
-        <p class="text-gray-700">4 weeks (self-paced)</p>
-      </div>
-      <div>
-        <h4 class="font-semibold text-green-800 mb-1">Modules & Levels</h4>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>Level 1: Foundations of Ayurveda</li>
-          <li>Level 2: Hormonal Balance & PCOS</li>
-          <li>Level 3: Digestive Health</li>
-          <li>Level 4: Rituals & Recipes</li>
-        </ul>
-      </div>
-    </div>
-    <!-- Reviews -->
-    <div>
-      <h3 class="text-xl font-semibold text-green-700 mb-2">Reviews</h3>
-      <div class="space-y-3">
-        <div class="bg-green-50 border-l-4 border-orange-400 p-3 rounded">
-          <p class="text-gray-700 italic">“This guide helped me balance my hormones and feel more energized!”</p>
-          <span class="text-xs text-gray-500">- Priya S.</span>
+  
+  <!-- Pricing Section - Color-Coded Options -->
+  <div id="pricing" class="max-w-6xl mx-auto w-full mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-green-900 mb-2">Choose Your Path</h2>
+    <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Select the plan that works best for your journey. All plans include full access to our digital guide content.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Monthly Plan -->
+      <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl shadow-lg overflow-hidden border border-green-200 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="bg-green-700 text-white p-6 text-center">
+          <h3 class="text-2xl font-bold mb-2">Monthly</h3>
+          <div class="text-xs uppercase tracking-wide mb-2">Flexible Option</div>
         </div>
-        <div class="bg-green-50 border-l-4 border-orange-400 p-3 rounded">
-          <p class="text-gray-700 italic">“The recipes and rituals are easy to follow and truly transformative.”</p>
-          <span class="text-xs text-gray-500">- Anjali K.</span>
+        <div class="p-6 flex flex-col items-center">
+          <div class="text-4xl font-bold text-green-800 mb-1">NPR 999</div>
+          <div class="text-gray-500 mb-6">per month</div>
+          
+          <ul class="w-full space-y-3 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-700 mr-2"></i>
+              <span>Full access to all modules</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-700 mr-2"></i>
+              <span>Community support</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-green-700 mr-2"></i>
+              <span>Cancel anytime</span>
+            </li>
+          </ul>
+          
+          <a href="https://nas.io/" target="_blank" class="bg-green-700 hover:bg-green-800 text-white w-full py-3 rounded-lg font-semibold text-center transition">Subscribe Monthly</a>
         </div>
       </div>
+      
+      <!-- Half-Yearly Plan -->
+      <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl shadow-lg overflow-hidden border border-amber-200 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="bg-amber-700 text-white p-6 text-center relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-amber-600 text-white text-xs font-bold px-3 py-1 transform rotate-45 translate-x-5 translate-y-3 shadow-md">
+            POPULAR
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Half-Yearly</h3>
+          <div class="text-xs uppercase tracking-wide mb-2">Best Value</div>
+        </div>
+        <div class="p-6 flex flex-col items-center">
+          <div class="text-4xl font-bold text-amber-800 mb-1">NPR 4,999</div>
+          <div class="text-gray-500 mb-2">for 6 months</div>
+          <div class="text-green-700 font-semibold text-sm mb-6">Save NPR 995</div>
+          
+          <ul class="w-full space-y-3 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-amber-700 mr-2"></i>
+              <span>Everything in Monthly</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-amber-700 mr-2"></i>
+              <span>Exclusive seasonal guides</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-amber-700 mr-2"></i>
+              <span>Priority support</span>
+            </li>
+          </ul>
+          
+          <a href="https://nas.io/" target="_blank" class="bg-amber-700 hover:bg-amber-800 text-white w-full py-3 rounded-lg font-semibold text-center transition">Subscribe Half-Yearly</a>
+        </div>
+      </div>
+      
+      <!-- Yearly Plan -->
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-lg overflow-hidden border border-orange-200 transform transition duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="bg-orange-700 text-white p-6 text-center">
+          <h3 class="text-2xl font-bold mb-2">Yearly</h3>
+          <div class="text-xs uppercase tracking-wide mb-2">Biggest Savings</div>
+        </div>
+        <div class="p-6 flex flex-col items-center">
+          <div class="text-4xl font-bold text-orange-800 mb-1">NPR 8,999</div>
+          <div class="text-gray-500 mb-2">for 12 months</div>
+          <div class="text-green-700 font-semibold text-sm mb-6">Save NPR 2,989</div>
+          
+          <ul class="w-full space-y-3 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-orange-700 mr-2"></i>
+              <span>Everything in Half-Yearly</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-orange-700 mr-2"></i>
+              <span>Two free 1:1 consultations</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-orange-700 mr-2"></i>
+              <span>10% off retreats</span>
+            </li>
+          </ul>
+          
+          <a href="https://nas.io/" target="_blank" class="bg-orange-700 hover:bg-orange-800 text-white w-full py-3 rounded-lg font-semibold text-center transition">Subscribe Yearly</a>
+        </div>
+      </div>
     </div>
-    <!-- Reference -->
-    <div class="mt-2 text-xs text-gray-500">Reference: <a href="https://www.coursera.org/learn/introduction-to-ai" target="_blank" class="text-orange-700 underline">Introduction to AI (Coursera)</a></div>
+    
+    <div class="text-center mt-6 text-gray-500 text-sm">
+      All plans include a 7-day money-back guarantee. No questions asked.
+    </div>
+  </div>
+  
+  <!-- Guide Content Preview - Seamless Design -->
+  <div class="max-w-5xl mx-auto w-full">
+    <h2 class="text-3xl font-bold text-center text-green-900 mb-10">What's Inside</h2>
+    
+    <!-- Module Preview with Seamless Image/Text Integration -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="flex">
+          <!-- Left side: Image -->
+          <div class="w-1/3">
+            <div class="h-full bg-green-700 flex items-center justify-center">
+              <img src="Photos/rits1.png" alt="Module 1" class="w-full h-full object-cover opacity-75" />
+            </div>
+          </div>
+          <!-- Right side: Content -->
+          <div class="w-2/3 p-5">
+            <span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-1 rounded">Module 1</span>
+            <h3 class="text-lg font-bold text-green-900 mt-2 mb-2">Foundations of Ayurveda</h3>
+            <p class="text-sm text-gray-600">Discover your dosha type and learn the fundamental principles that will guide your healing journey.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="flex">
+          <div class="w-1/3">
+            <div class="h-full bg-orange-700 flex items-center justify-center">
+              <img src="Photos/rits2.png" alt="Module 2" class="w-full h-full object-cover opacity-75" />
+            </div>
+          </div>
+          <div class="w-2/3 p-5">
+            <span class="text-xs font-semibold bg-orange-100 text-orange-800 px-2 py-1 rounded">Module 2</span>
+            <h3 class="text-lg font-bold text-orange-900 mt-2 mb-2">Hormonal Balance & PCOS</h3>
+            <p class="text-sm text-gray-600">Natural approaches to restore harmony to your hormonal system and address PCOS symptoms.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="flex">
+          <div class="w-1/3">
+            <div class="h-full bg-green-800 flex items-center justify-center">
+              <img src="Photos/rits3.png" alt="Module 3" class="w-full h-full object-cover opacity-75" />
+            </div>
+          </div>
+          <div class="w-2/3 p-5">
+            <span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-1 rounded">Module 3</span>
+            <h3 class="text-lg font-bold text-green-900 mt-2 mb-2">Digestive Health</h3>
+            <p class="text-sm text-gray-600">The Ayurvedic approach to optimal digestion as the foundation for overall wellbeing.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="flex">
+          <div class="w-1/3">
+            <div class="h-full bg-amber-700 flex items-center justify-center">
+              <img src="Photos/rits4.png" alt="Module 4" class="w-full h-full object-cover opacity-75" />
+            </div>
+          </div>
+          <div class="w-2/3 p-5">
+            <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-2 py-1 rounded">Module 4</span>
+            <h3 class="text-lg font-bold text-amber-900 mt-2 mb-2">Rituals & Recipes</h3>
+            <p class="text-sm text-gray-600">Practical daily practices and nourishing food preparations to support your wellness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Testimonials with Seamless Design -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-center text-green-900 mb-8">What Our Members Say</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl relative">
+          <div class="text-green-800 text-4xl absolute -top-4 -left-2 opacity-20">"</div>
+          <p class="text-gray-700 italic mb-4 z-10 relative">This guide helped me balance my hormones and feel more energized! The rituals are easy to follow and truly transformative.</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center text-green-800 font-bold">P</div>
+            <div>
+              <div class="font-semibold text-green-900">Priya S.</div>
+              <div class="text-xs text-gray-500">Member since 2022</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl relative">
+          <div class="text-orange-800 text-4xl absolute -top-4 -left-2 opacity-20">"</div>
+          <p class="text-gray-700 italic mb-4 z-10 relative">The Ayurvedic approach to PCOS has been life-changing. I've noticed such improvement in my symptoms after just one month!</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-orange-200 flex items-center justify-center text-orange-800 font-bold">A</div>
+            <div>
+              <div class="font-semibold text-orange-900">Anjali K.</div>
+              <div class="text-xs text-gray-500">Member since 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+      <h2 class="text-2xl font-bold text-center text-green-900 mb-8">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-bold text-green-800 mb-2">How do I access the guide after purchase?</h3>
+          <p class="text-gray-600">After completing your purchase, you'll receive an email with login credentials to access all digital content through our member portal.</p>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-green-800 mb-2">Is this suitable for beginners to Ayurveda?</h3>
+          <p class="text-gray-600">Yes, absolutely! The guide starts with foundational concepts and gradually builds your understanding, making it perfect for beginners and those with some Ayurvedic knowledge.</p>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-green-800 mb-2">Can I download the content to view offline?</h3>
+          <p class="text-gray-600">Yes, all modules are available for download in PDF format so you can access them without an internet connection.</p>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-green-800 mb-2">How is this different from free content online?</h3>
+          <p class="text-gray-600">Our guide provides structured, in-depth information based on authentic Ayurvedic principles, with practical applications tailored to modern life—all curated by certified Ayurvedic practitioners.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Final CTA -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-green-900 mb-4">Ready to Begin Your Healing Journey?</h2>
+      <a href="#pricing" class="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
+        Choose Your Plan
+      </a>
+    </div>
   </div>
 </section>
   
-  <footer class="w-full bg-[#18382c] text-white py-6 px-4 mt-0 border-t border-[#2c3e50] shadow-inner">
   <footer class="w-full bg-gradient-to-tr from-[#18382c] via-[#254d3b] to-[#8B4513] text-white py-10 px-4 mt-0 border-t border-[#2c3e50] shadow-inner">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap justify-between items-stretch gap-8 md:gap-12">
-      <!-- Brand and Social -->
-      <div class="flex flex-col items-center md:items-start mb-8 md:mb-0 w-full sm:w-2/3 md:w-1/3 min-w-[220px]">
-        <div class="flex items-center gap-2 mb-2">
-          <img src="Photos/image.png" alt="Hariyali Logo" class="h-10 w-10 rounded-full border-2 border-sage shadow" />
-          <span class="text-2xl font-bold font-playfair tracking-wider">Hariyali Botanic</span>
-        </div>
-        <p class="text-sm md:text-base text-gray-200 mb-2 text-center md:text-left">Ancient Wisdom. Botanical Beauty. Ayurvedic Healing.</p>
-        <p class="text-xs md:text-sm text-gray-300 mb-4 text-center md:text-left italic">“Nourishing you with the purest botanicals from the Himalayas, blending tradition and science for radiant well-being.”</p>
-        <div class="flex space-x-4 mt-1 justify-center md:justify-start">
-          <a href="https://www.facebook.com" target="_blank" class="hover:text-[#f7c873] text-xl"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com" target="_blank" class="hover:text-[#f7c873] text-xl"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.daraz.com.np" target="_blank" class="hover:text-[#f7c873] text-xl"><i class="fas fa-shopping-bag"></i></a>
-        </div>
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-start gap-6 md:gap-12">
+      <!-- Left: Quick Links -->
+      <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-8 md:mb-0">
+        <h4 class="text-lg font-semibold mb-4 text-[#f7c873]">Quick Links</h4>
+        <ul class="space-y-2 text-sm md:text-base">
+          <li><a href="shop.html" class="hover:text-[#f7c873] transition">Shop</a></li>
+          <li><a href="digital.html" class="hover:text-[#f7c873] transition">Digital Guide</a></li>
+          <li><a href="ayuretreat.html" class="hover:text-[#f7c873] transition">Ayuretreat</a></li>
+          <li><a href="club.html" class="hover:text-[#f7c873] transition">Club</a></li>
+          <li><a href="blog.html" class="hover:text-[#f7c873] transition">Blog</a></li>
+          <li><a href="aboutus.html" class="hover:text-[#f7c873] transition">About Us</a></li>
+          <li><a href="https://nas.io" target="_blank" class="hover:text-[#f7c873] transition">Membership</a></li>
+        </ul>
       </div>
-      <!-- Quick Links -->
-      <div class="flex-1 flex flex-col items-center md:items-start mb-8 md:mb-0 w-full sm:w-1/2 md:w-1/4 min-w-[180px]">
-        <div class="flex items-center gap-2 mb-2">
-          <i class="fas fa-link text-[#f7c873]"></i>
-          <span class="font-semibold text-lg tracking-wide">Quick Links</span>
-        </div>
-        <div class="flex flex-wrap gap-2 text-xs md:text-sm text-gray-200 mb-2">
-          <a href="index.html" class="hover:text-[#f7c873]">Home</a>
-          <span>|</span>
-          <a href="shop.html" class="hover:text-[#f7c873]">Shop</a>
-          <span>|</span>
-          <a href="digital.html" class="hover:text-[#f7c873]">Guide</a>
-          <span>|</span>
-          <a href="ayuretreat.html" class="hover:text-[#f7c873]">Ayuretreat</a>
-          <span>|</span>
-          <a href="club.html" class="hover:text-[#f7c873]">Club</a>
-          <span>|</span>
-          <a href="blog.html" class="hover:text-[#f7c873]">Blog</a>
-          <span>|</span>
-          <a href="contact.html" class="hover:text-[#f7c873]">Contact Us</a>
-        </div>
-        <a href="#" class="block mt-2 text-xs md:text-sm text-gray-400 hover:text-[#f7c873] underline">Terms and Conditions</a>
+      
+      <!-- Center: Simple Brand -->
+      <div class="w-full sm:w-1/2 md:w-1/3 mb-8 md:mb-0 text-center">
+        <h3 class="text-2xl font-bold font-playfair mb-4">Hariyali Botanics</h3>
+        <p class="text-sm text-gray-300 mt-8">
+          &copy; 2025 Hariyali Botanic. All rights reserved.
+        </p>
       </div>
-      <!-- Email Signup & Message -->
-      <div class="flex-1 flex flex-col items-center md:items-end w-full sm:w-2/3 md:w-1/3 min-w-[220px]">
-        <div class="flex items-center gap-2 mb-2">
-          <i class="fas fa-envelope text-[#f7c873]"></i>
-          <span class="font-semibold text-lg tracking-wide">Stay Connected</span>
-        </div>
-        <form class="w-full max-w-xs mb-4 flex flex-col gap-2">
-          <label for="footer-email-signup" class="block text-xs text-[#e0e7ef] mb-1">Sign up for updates</label>
-          <div class="flex rounded-lg overflow-hidden border border-[#31404d] bg-[#22343a]">
-            <input type="email" id="footer-email-signup" placeholder="Your email" class="flex-1 px-3 py-2 bg-transparent text-white focus:outline-none text-xs" required>
-            <button type="submit" class="bg-[#f7c873] hover:bg-[#8B4513] text-[#18382c] px-4 py-2 font-semibold text-xs transition flex items-center gap-1"><i class="fas fa-paper-plane"></i> Sign Up</button>
-          </div>
-        </form>
-        <div class="bg-[#22343a]/80 rounded-xl p-4 shadow-lg border border-[#2c3e50] w-full max-w-xs">
-          <form id="footer-message-form" class="space-y-2">
-            <div>
-              <label for="footer-name" class="block text-xs text-[#e0e7ef] mb-1">Name</label>
-              <input type="text" id="footer-name" name="footer-name" autocomplete="off"
-                class="w-full px-2 py-1 rounded-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#f7c873] transition text-xs"
-                required>
-            </div>
-            <div>
-              <label for="footer-message" class="block text-xs text-[#e0e7ef] mb-1">Message</label>
-              <textarea id="footer-message" name="footer-message" rows="2"
-                class="w-full px-2 py-1 rounded-lg bg-[#18222b] text-white border border-[#31404d] focus:outline-none focus:ring-2 focus:ring-[#f7c873] transition resize-none text-xs"
-                required></textarea>
-            </div>
-            <button type="submit"
-              class="w-full bg-[#f7c873] hover:bg-[#8B4513] text-[#18382c] py-1 rounded-lg font-mono font-semibold text-xs flex items-center justify-center gap-2 transition">
-              <span><i class="fas fa-paper-plane"></i></span> Send Message
-            </button>
-          </form>
-          <div id="footer-message-success" class="hidden text-green-300 mt-2 text-center text-xs">Thank you for your message!</div>
+      
+      <!-- Right: Contact Information -->
+      <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <h4 class="text-lg font-semibold mb-4 text-[#f7c873]">Contact Us</h4>
+        <ul class="space-y-3 text-sm md:text-base mb-6">
+          <li class="flex items-center gap-2">
+            <i class="fas fa-phone text-[#f7c873]"></i>
+            <a href="tel:+9779800000000" class="hover:text-[#f7c873] transition">+977-9800000000</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-envelope text-[#f7c873]"></i>
+            <a href="mailto:info@hariyalibotanic.com" class="hover:text-[#f7c873] transition">info@hariyalibotanic.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fas fa-map-marker-alt text-[#f7c873] mt-1"></i>
+            <span>Kathmandu, Nepal</span>
+          </li>
+        </ul>
+        
+        <!-- Social Media Links -->
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-[#f7c873] transition text-xl">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-[#f7c873] transition text-xl">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="text-white hover:text-[#f7c873] transition text-xl">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.daraz.com.np" target="_blank" class="text-white hover:text-[#f7c873] transition text-xl">
+            <i class="fas fa-shopping-bag"></i>
+          </a>
         </div>
       </div>
     </div>
-    <div class="border-t border-[#2c3e50] mt-8 pt-4 text-center text-xs text-gray-300 w-full">
-      &copy; 2025 Hariyali Botanic. All rights reserved.
-    </div>
+    
+    <!-- Responsive Styles -->
     <style>
       @media (max-width: 768px) {
         footer .max-w-7xl {
           flex-direction: column !important;
-          align-items: stretch !important;
+          align-items: center !important;
+          text-align: center;
         }
         footer [class*='w-1/3'],
         footer [class*='w-1/4'],
-        footer [class*='w-2/3'],
         footer [class*='w-1/2'] {
           min-width: 0 !important;
           width: 100% !important;
         }
-        footer .flex-1 {
-          width: 100% !important;
-        }
-        footer .mb-8 {
-          margin-bottom: 2rem !important;
+        footer .flex.items-center,
+        footer .flex.items-start {
+          justify-content: center;
         }
       }
       @media (max-width: 480px) {
         footer .max-w-7xl {
           padding-left: 0.5rem !important;
           padding-right: 0.5rem !important;
-        }
-        footer .text-lg, footer .text-xl, footer .text-2xl {
-          font-size: 1rem !important;
-        }
-        footer .p-4, footer .p-3, footer .p-6 {
-          padding: 0.75rem !important;
         }
       }
     </style>
