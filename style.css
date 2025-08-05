@@ -628,3 +628,14 @@ section.bg-\[\#f7f2ea\] a.group:hover span:first-child {
 .category-btn:active {
   transform: scale(0.97);
 }
+
+/* Mobile navigation adjustments */
+@media (max-width: 767px) {
+  /* Change logo positioning for mobile */
+  .mobile-logo-position {
+    position: relative;
+    left: auto;
+    transform: none;
+    -webkit-transform: none;
+  }
+}

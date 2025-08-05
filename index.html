@@ -22,6 +22,13 @@
       <div class="flex items-center h-20 relative">
         <!-- Left Logo and Nav Links -->
         <div class="flex items-center flex-1">
+          <!-- Logo - Left aligned on mobile -->
+          <div class="md:hidden flex items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+              <img src="Photos/image.png" alt="Hariyali Logo" class="h-14 w-14 object-cover rounded-full border-2 border-sage shadow-lg group-hover:scale-105 transition-transform duration-200" />
+            </a>
+          </div>
+          
           <!-- Left Nav Links -->
           <div class="hidden md:flex space-x-8 text-base font-semibold justify-start text-[#18382c]">
           <!-- Shop Dropdown -->
@@ -54,13 +61,13 @@
           </div>
         </div>
         </div>
-        <!-- Center Logo -->
-      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 z-30">
-        <a href="index.html" class="flex items-center gap-2 group">
-          <img src="Photos/image.png" alt="Hariyali Logo" class="h-16 w-16 object-cover rounded-full border-2 border-sage shadow-lg group-hover:scale-105 transition-transform duration-200" />
-          <!-- <span class="text-2xl font-extrabold tracking-wider text-sage drop-shadow group-hover:text-[#18382c] transition-colors duration-200 font-playfair">Hariyali</span> -->
-        </a>
-      </div>
+        <!-- Center Logo - Desktop only -->
+        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 z-30 hidden md:flex">
+          <a href="index.html" class="flex items-center gap-2 group">
+            <img src="Photos/image.png" alt="Hariyali Logo" class="h-16 w-16 object-cover rounded-full border-2 border-sage shadow-lg group-hover:scale-105 transition-transform duration-200" />
+            <!-- <span class="text-2xl font-extrabold tracking-wider text-sage drop-shadow group-hover:text-[#18382c] transition-colors duration-200 font-playfair">Hariyali</span> -->
+          </a>
+        </div>
 
         <!-- Right Icons -->
         <div class="flex items-center space-x-5 text-lg flex-1 justify-end">
