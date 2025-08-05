@@ -99,7 +99,7 @@
       <ul class="space-y-2 pt-4 font-medium">
         <li><a href="shop.html" class="block hover:text-sage">Shop</a></li>
         <li><a href="digital.html" class="block hover:text-sage">Guides</a></li>
-        <li><a href="ayuretreat.html" class="block hover:text-sage">Ayuretreat</a></li>
+        <li><a href="Ayuretreat.html" class="block hover:text-sage">Ayuretreat</a></li>
         <li><a href="our_story.html" class="block hover:text-sage">About Us</a></li>
         <li><a href="https://nas.io" target="_blank" class="block hover:text-sage">Membership</a></li>
         <li><a href="contact.html" class="block hover:text-sage">Contact Us</a></li>
@@ -599,7 +599,7 @@
         <ul class="space-y-2 text-sm md:text-base">
           <li><a href="shop.html" class="hover:text-[#f7c873] transition">Shop</a></li>
           <li><a href="digital.html" class="hover:text-[#f7c873] transition">Digital Guide</a></li>
-          <li><a href="ayuretreat.html" class="hover:text-[#f7c873] transition">Ayuretreat</a></li>
+          <li><a href="Ayuretreat.html" class="hover:text-[#f7c873] transition">Ayuretreat</a></li>
           <li><a href="club.html" class="hover:text-[#f7c873] transition">Club</a></li>
           <li><a href="blog.html" class="hover:text-[#f7c873] transition">Blog</a></li>
           <li><a href="aboutus.html" class="hover:text-[#f7c873] transition">About Us</a></li>
@@ -679,255 +679,224 @@
     </style>
   </footer>
 
-  <script>
-    // Typing animation for hero overlay
-    // ===== Product Slider Script =====
-    (function() {
-      const sliderRow = document.getElementById('horizontal-slider');
-      const sliderViewport = sliderRow ? sliderRow.parentElement : null;
-      const leftBtn = document.getElementById('slider-left');
-      const rightBtn = document.getElementById('slider-right');
-      if (sliderRow && sliderViewport && leftBtn && rightBtn) {
-        // Show/hide arrows based on screen size
-        function updateArrowVisibility() {
-          if (window.innerWidth >= 768) {
-            leftBtn.style.display = 'flex';
-            rightBtn.style.display = 'flex';
-          } else {
-            leftBtn.style.display = 'none';
-            rightBtn.style.display = 'none';
-          }
-        }
-        updateArrowVisibility();
-        window.addEventListener('resize', updateArrowVisibility);
-        // Scroll by one card width
-        function getCardWidth() {
-          const card = sliderRow.querySelector('.product-card');
-          return card ? card.offsetWidth + 16 : 320; // 16px gap fallback
-        }
-        leftBtn.addEventListener('click', () => {
-          sliderViewport.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
-        });
-        rightBtn.addEventListener('click', () => {
-          sliderViewport.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-        });
-      }
-    })();
-    const heroTexts = [
-      "Ancient Wisdom.",
-      "Botanical Beauty.",
-      "Ayurvedic Healing."
-    ];
-    let heroIndex = 0, charIndex = 0, isDeleting = false;
-    const typingSpeed = 70, erasingSpeed = 40, delayBetween = 1200;
-    const heroTyping = document.getElementById('hero-typing');
+<!-- Include the navigation script -->
+<script src="js/navigation.js"></script>
 
-    function typeHeroText() {
-      if (!heroTyping) return;
-      const current = heroTexts[heroIndex];
-      if (!isDeleting) {
-        heroTyping.textContent = current.substring(0, charIndex + 1);
-        charIndex++;
-        if (charIndex === current.length) {
-          isDeleting = true;
-          setTimeout(typeHeroText, delayBetween);
+<script>
+  // Typing animation for hero overlay
+  // ===== Product Slider Script =====
+  (function() {
+    const sliderRow = document.getElementById('horizontal-slider');
+    const sliderViewport = sliderRow ? sliderRow.parentElement : null;
+    const leftBtn = document.getElementById('slider-left');
+    const rightBtn = document.getElementById('slider-right');
+    if (sliderRow && sliderViewport && leftBtn && rightBtn) {
+      // Show/hide arrows based on screen size
+      function updateArrowVisibility() {
+        if (window.innerWidth >= 768) {
+          leftBtn.style.display = 'flex';
+          rightBtn.style.display = 'flex';
         } else {
-          setTimeout(typeHeroText, typingSpeed);
+          leftBtn.style.display = 'none';
+          rightBtn.style.display = 'none';
         }
+      }
+      updateArrowVisibility();
+      window.addEventListener('resize', updateArrowVisibility);
+      // Scroll by one card width
+      function getCardWidth() {
+        const card = sliderRow.querySelector('.product-card');
+        return card ? card.offsetWidth + 16 : 320; // 16px gap fallback
+      }
+      leftBtn.addEventListener('click', () => {
+        sliderViewport.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+      });
+      rightBtn.addEventListener('click', () => {
+        sliderViewport.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+      });
+    }
+  })();
+  const heroTexts = [
+    "Ancient Wisdom.",
+    "Botanical Beauty.",
+    "Ayurvedic Healing."
+  ];
+  let heroIndex = 0, charIndex = 0, isDeleting = false;
+  const typingSpeed = 70, erasingSpeed = 40, delayBetween = 1200;
+  const heroTyping = document.getElementById('hero-typing');
+
+  function typeHeroText() {
+    if (!heroTyping) return;
+    const current = heroTexts[heroIndex];
+    if (!isDeleting) {
+      heroTyping.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(typeHeroText, delayBetween);
       } else {
-        heroTyping.textContent = current.substring(0, charIndex - 1);
-        charIndex--;
-        if (charIndex === 0) {
-          isDeleting = false;
-          heroIndex = (heroIndex + 1) % heroTexts.length;
-          setTimeout(typeHeroText, 400);
-        } else {
-          setTimeout(typeHeroText, erasingSpeed);
-        }
+        setTimeout(typeHeroText, typingSpeed);
+      }
+    } else {
+      heroTyping.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        heroIndex = (heroIndex + 1) % heroTexts.length;
+        setTimeout(typeHeroText, 400);
+      } else {
+        setTimeout(typeHeroText, erasingSpeed);
       }
     }
-    if (heroTyping) typeHeroText();
-    const toggle = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+  }
+  if (heroTyping) typeHeroText();
+
+  // Remove these blocks as they're now in navigation.js
+  // const toggle = document.getElementById('mobile-toggle');
+  // const menu = document.getElementById('mobile-menu');
+  // toggle.addEventListener('click', () => {
+  //   menu.classList.toggle('hidden');
+  // });
+
+  // Rotating testimonials
+  const testimonials = [
+    {
+      quote: "The products have transformed my skin! Love the natural feel.",
+      author: "– Anisha, Kathmandu"
+    },
+    {
+      quote: "Hariyali is more than skincare, it's a ritual of self-love. My skin glows every morning.",
+      author: "– Prerana, Lalitpur"
+    },
+    {
+      quote: "I struggled with acne for years. After using Hariyali, my skin feels calm and clear.",
+      author: "– Suman, Pokhara"
+    },
+    {
+      quote: "The scents are so calming and the results are real. My friends keep asking my secret!",
+      author: "– Prakash, Bhaktapur"
+    },
+    {
+      quote: "Natural, gentle, and effective. I recommend Hariyali to everyone who cares about their skin.",
+      author: "– Ritu, Butwal"
+    },
+    {
+      quote: "The ritual quiz was spot on. My personalized routine feels luxurious and easy.",
+      author: "– Sneha, Kathmandu"
+    },
+    {
+      quote: "My dry skin is finally hydrated and happy. Thank you, Hariyali!",
+      author: "– Binita, Dharan"
+    }
+  ];
+  let testimonialIndex = 0;
+  function rotateTestimonial() {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    document.getElementById('testimonial-quote').textContent = testimonials[testimonialIndex].quote;
+    document.getElementById('testimonial-author').textContent = testimonials[testimonialIndex].author;
+  }
+  setInterval(rotateTestimonial, 4000);
+
+  // Rotating digital guides/courses/blogs
+  const digitalItems = [
+    {
+      title: "Ayurveda for Beginners: A Self-Healing Course",
+      type: "Course",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet."
+    },
+    {
+      title: "Holistic Skincare: Digital Guide",
+      type: "Digital Guide",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet."
+    },
+    {
+      title: "Mindful Living: 7-Day Challenge",
+      type: "Course",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet."
+    },
+    {
+      title: "The Science of Herbs in Ayurveda",
+      type: "Blog",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet.."
+    },
+    {
+      title: "How to Choose the Right Oil for Your Dosha",
+      type: "Blog",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet.."
+    }
+  ];
+  let digitalIndex = 0;
+  function rotateDigital() {
+    digitalIndex = (digitalIndex + 1) % digitalItems.length;
+    document.getElementById('digital-title').textContent = digitalItems[digitalIndex].title;
+    document.getElementById('digital-type').textContent = digitalItems[digitalIndex].type;
+    document.getElementById('digital-desc').textContent = digitalItems[digitalIndex].desc;
+  }
+  setInterval(rotateDigital, 4000);
+
+  // Email signup dummy handler
+  document.querySelector('form[action=""]').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.reset();
+    // Optionally show a message
+  });
+  // Footer message form handler
+  document.getElementById('footer-message-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('footer-name').value = '';
+    document.getElementById('footer-message').value = '';
+    document.getElementById('footer-message-success').classList.remove('hidden');
+    setTimeout(() => {
+      document.getElementById('footer-message-success').classList.add('hidden');
+    }, 3000);
+  });
+
+  // ===== Chatbot Script =====
+  // Remove DOMContentLoaded so the script runs immediately after elements are loaded
+  const chatbotBtn = document.getElementById('chatbot-btn');
+  const chatbotPopup = document.getElementById('chatbot-popup');
+  const chatbotForm = document.getElementById('chatbot-form');
+  const chatbotInput = document.getElementById('chatbot-input');
+  const chatbotMessages = document.getElementById('chatbot-messages');
+
+  if (chatbotBtn && chatbotPopup) {
+    chatbotBtn.addEventListener('click', () => {
+      // Always show the popup when clicked
+      chatbotPopup.style.display = 'block';
+      chatbotMessages.innerHTML = '';
+      chatbotInput.value = '';
+      chatbotInput.focus();
     });
+  }
 
-
-    // Remove manual transform for mobile to prevent overflow
-    // let scrollAmount = 0;
-    // const slider = document.getElementById("horizontal-slider");
-    // function slideHorizontal(direction) {
-    //   const cardWidth = 368; // width + gap
-    //   scrollAmount += direction * cardWidth;
-    //   slider.style.transform = `translateX(-${scrollAmount}px)`;
-    // }
-
-    // Rotating testimonials
-    const testimonials = [
-      {
-        quote: "The products have transformed my skin! Love the natural feel.",
-        author: "– Anisha, Kathmandu"
-      },
-      {
-        quote: "Hariyali is more than skincare, it's a ritual of self-love. My skin glows every morning.",
-        author: "– Prerana, Lalitpur"
-      },
-      {
-        quote: "I struggled with acne for years. After using Hariyali, my skin feels calm and clear.",
-        author: "– Suman, Pokhara"
-      },
-      {
-        quote: "The scents are so calming and the results are real. My friends keep asking my secret!",
-        author: "– Prakash, Bhaktapur"
-      },
-      {
-        quote: "Natural, gentle, and effective. I recommend Hariyali to everyone who cares about their skin.",
-        author: "– Ritu, Butwal"
-      },
-      {
-        quote: "The ritual quiz was spot on. My personalized routine feels luxurious and easy.",
-        author: "– Sneha, Kathmandu"
-      },
-      {
-        quote: "My dry skin is finally hydrated and happy. Thank you, Hariyali!",
-        author: "– Binita, Dharan"
-      }
-    ];
-    let testimonialIndex = 0;
-    function rotateTestimonial() {
-      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-      document.getElementById('testimonial-quote').textContent = testimonials[testimonialIndex].quote;
-      document.getElementById('testimonial-author').textContent = testimonials[testimonialIndex].author;
-    }
-    setInterval(rotateTestimonial, 4000);
-
-    // Rotating digital guides/courses/blogs
-    const digitalItems = [
-      {
-        title: "Ayurveda for Beginners: A Self-Healing Course",
-        type: "Course",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet."
-      },
-      {
-        title: "Holistic Skincare: Digital Guide",
-        type: "Digital Guide",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet."
-      },
-      {
-        title: "Mindful Living: 7-Day Challenge",
-        type: "Course",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet."
-      },
-      {
-        title: "The Science of Herbs in Ayurveda",
-        type: "Blog",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet.."
-      },
-      {
-        title: "How to Choose the Right Oil for Your Dosha",
-        type: "Blog",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate explicabo dolores, quidem tenetur hic iure eos vitae cum dolorum, accusamus facilis necessitatibus repudiandae. Quidem obcaecati sequi quae amet explicabo eveniet.."
-      }
-    ];
-    let digitalIndex = 0;
-    function rotateDigital() {
-      digitalIndex = (digitalIndex + 1) % digitalItems.length;
-      document.getElementById('digital-title').textContent = digitalItems[digitalIndex].title;
-      document.getElementById('digital-type').textContent = digitalItems[digitalIndex].type;
-      document.getElementById('digital-desc').textContent = digitalItems[digitalIndex].desc;
-    }
-    setInterval(rotateDigital, 4000);
-
-    // Email signup dummy handler
-    document.querySelector('form[action=""]').addEventListener('submit', function(e) {
+  if (chatbotForm && chatbotMessages && chatbotInput) {
+    chatbotForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      this.reset();
-      // Optionally show a message
-    });
-    // Footer message form handler
-    document.getElementById('footer-message-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('footer-name').value = '';
-      document.getElementById('footer-message').value = '';
-      document.getElementById('footer-message-success').classList.remove('hidden');
-      setTimeout(() => {
-        document.getElementById('footer-message-success').classList.add('hidden');
-      }, 3000);
-    });
-
-    // Make dropdowns open on click for mobile and keyboard users
-    document.querySelectorAll('.group > button').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const parent = btn.parentElement;
-        // Close other open dropdowns
-        document.querySelectorAll('.group .group-hover\\:block').forEach(el => {
-          if (!parent.contains(el)) el.style.display = 'none';
-        });
-        // Toggle current dropdown
-        const dropdown = parent.querySelector('.group-hover\\:block');
-        if (dropdown) {
-          dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-        }
-      });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-      document.querySelectorAll('.group .group-hover\\:block').forEach(el => {
-        if (!el.contains(e.target) && !el.parentElement.contains(e.target)) {
-          el.style.display = 'none';
-        }
-      });
-    });
-
-    // ===== Chatbot Script =====
-    // Remove DOMContentLoaded so the script runs immediately after elements are loaded
-    const chatbotBtn = document.getElementById('chatbot-btn');
-    const chatbotPopup = document.getElementById('chatbot-popup');
-    const chatbotForm = document.getElementById('chatbot-form');
-    const chatbotInput = document.getElementById('chatbot-input');
-    const chatbotMessages = document.getElementById('chatbot-messages');
-
-    if (chatbotBtn && chatbotPopup) {
-      chatbotBtn.addEventListener('click', () => {
-        // Always show the popup when clicked
-        chatbotPopup.style.display = 'block';
-        chatbotMessages.innerHTML = '';
+      const userMsg = chatbotInput.value.trim();
+      if (userMsg) {
+        chatbotMessages.innerHTML = `
+          <div class="mb-2"><span class="font-semibold text-[#18382c]">You:</span> ${userMsg}</div>
+          <div class="mb-2"><span class="font-semibold text-[#18382c]">Bot:</span> Hello customer, we are Hariyali Botanic.<br>
+          For more details, contact us on WhatsApp.</div>
+          <a href="https://wa.me/9779800000000" target="_blank" class="inline-block bg-[#25D366] text-white px-3 py-1 rounded mt-2 font-semibold text-xs hover:bg-[#128C7E] transition">
+            WhatsApp Chat
+          </a>
+        `;
         chatbotInput.value = '';
-        chatbotInput.focus();
-      });
-    }
-
-    if (chatbotForm && chatbotMessages && chatbotInput) {
-      chatbotForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const userMsg = chatbotInput.value.trim();
-        if (userMsg) {
-          chatbotMessages.innerHTML = `
-            <div class="mb-2"><span class="font-semibold text-[#18382c]">You:</span> ${userMsg}</div>
-            <div class="mb-2"><span class="font-semibold text-[#18382c]">Bot:</span> Hello customer, we are Hariyali Botanic.<br>
-            For more details, contact us on WhatsApp.</div>
-            <a href="https://wa.me/9779800000000" target="_blank" class="inline-block bg-[#25D366] text-white px-3 py-1 rounded mt-2 font-semibold text-xs hover:bg-[#128C7E] transition">
-              WhatsApp Chat
-            </a>
-          `;
-          chatbotInput.value = '';
-        }
-      });
-    }
-
-    // Optional: Close popup when clicking outside
-    document.addEventListener('click', function(e) {
-      if (
-        chatbotPopup &&
-        !chatbotPopup.contains(e.target) &&
-        !chatbotBtn.contains(e.target)
-      ) {
-        chatbotPopup.style.display = 'none';
       }
     });
+  }
+
+  // Optional: Close popup when clicking outside
+  document.addEventListener('click', function(e) {
+    if (
+      chatbotPopup &&
+      !chatbotPopup.contains(e.target) &&
+      !chatbotBtn.contains(e.target)
+    ) {
+      chatbotPopup.style.display = 'none';
+    }
+  });
   </script>
 </body>
 </html>
